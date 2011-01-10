@@ -9,8 +9,13 @@ group :development do
 end
 
 group :test do
-  gem 'rspec'
+  gem 'rspec', '2.3.0'
+  gem 'webrat', '0.7.2'
+  gem 'autotest', '4.4.4'
+  gem 'redgreen', '1.2.2'
+  gem 'test-unit', '2.1.1'
 end
+
 
 
 # Use unicorn as the web server
