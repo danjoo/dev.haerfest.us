@@ -3,8 +3,20 @@
   <head>
     <title>HAERFEST | <%= @title %></title>
     <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
   </head>
+  <div class="header">
+    <h1><%= link_to 'HÆRFEST', home_path %></h1>
+  </div>
+  <div class="mainmenu">
+    <%= render 'layouts/mainmenu' %>
+  </div>
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
+  <div class="footer">
+    <%= render 'layouts/footer' %>
+  </div>
 </html>
