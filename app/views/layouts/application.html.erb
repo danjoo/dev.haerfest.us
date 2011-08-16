@@ -3,13 +3,13 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
-    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+    <%= render 'layouts/stylesheets' %>
   </head>
   <div class="header">
     <h1><%= link_to 'HÆRFEST', home_path %></h1>
   </div>
   <div class="mainmenu">
-    <%= render 'layouts/mainmenu' %>
+    <%= render 'layouts/topnav' %>
   </div>
   <body>
     <div class="container">
