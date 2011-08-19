@@ -36,16 +36,35 @@
 .container {
   text-align: center;
   font-family: "Century Gothic", "sans-serif";
+  height:450px;
+  overflow:hidden;
+  position:relative;
+  text-align: center;
+  margin:0 auto;
+  width:675px;
+/*  position:relative;
+  clear:both;
+  position:absolute;*/
+  top:0;
+  width:675px;
+  display:none;
 }
 
-.footer {
+.stick_to_bottom {
+width:100%;
+position:absolute;
+bottom:0;
+text-align:center;
+}
+
+.haerfest_footer {
   text-align: center;
   margin-top: 8ex;
   margin-left: auto;
   margin-right: auto;
   font-family: "Century Gothic", "sans-serif";
   color: #888888;
-  font-size: 50%;
+  font-size: 65%;
 }
 
 body {
