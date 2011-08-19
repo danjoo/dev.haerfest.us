@@ -25,32 +25,6 @@ describe PagesController do
     end
   end
   
-  describe "GET 'collections'" do
-    it "should be successful" do
-      get 'collections'
-      response.should be_success
-    end
-
-    it "should have the right title" do
-      get 'collections'
-      response.should have_selector("title",
-                                    :content => "#{@basetitle} | Collections")
-    end
-  end  
-  
-  describe "GET 'styles'" do
-    it "should be successful" do
-      get 'styles'
-      response.should be_success
-    end
-
-    it "should have the right title" do
-      get 'styles'
-      response.should have_selector("title",
-                                    :content => "#{@basetitle} | Styles")
-    end
-  end
-
   describe "GET 'about'" do
     it "should be successful" do
       get 'about'
@@ -61,19 +35,6 @@ describe PagesController do
       get 'about'
       response.should have_selector("title",
                                     :content => "#{@basetitle} | About")
-    end
-  end
-
-  describe "GET 'stockists'" do
-    it "should be successful" do
-      get 'stockists'
-      response.should be_success
-    end
-
-    it "should have the right title" do
-      get 'stockists'
-      response.should have_selector("title",
-                                    :content => "#{@basetitle} | Stockists")
     end
   end
 
