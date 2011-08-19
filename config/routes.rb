@@ -8,6 +8,7 @@ DevHaerfestUs::Application.routes.draw do
   get "pages/contact"
 
   root :to => "pages#home"
+  match '/',            :to => 'pages#home'
   match '/home',        :to => 'pages#home'
   match '/collections', :to => 'pages#collections'
   match '/styles',      :to => 'pages#styles'
