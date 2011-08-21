@@ -77,6 +77,19 @@ describe PagesController do
     end
   end
 
+  describe "GET 'inspiration'" do
+    it "should be successful" do
+      get 'inspiration'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'inspiration'
+      response.should have_selector("title",
+                                    :content => "#{@basetitle} | Inspiration")
+    end
+  end
+
   describe "GET 'contact'" do
     it "should be successful" do
       get 'contact'
