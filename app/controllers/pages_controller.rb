@@ -6,15 +6,12 @@ class PagesController < ApplicationController
 
   def collections
     @title = "Collections"
-    @collection = {
 
-    :collection_b => "collection_b.jpg",
-    :grey_olive   => "grey_olive_family.jpg",
-    :navy_slate   => "navy_slate_family.jpg",
-    :carmine_red  => "carmine_red_family.jpg",
-    :collection_a => "collection_a.jpg"
-
-    }
+    @collection_b = "collection_b.jpg",
+    @grey_olive   = "grey_olive_family.jpg",
+    @navy_slate   = "navy_slate_family.jpg",
+    @carmine_red  = "carmine_red_family.jpg",
+    @collection_a = "collection_a.jpg"
 
   end
 
@@ -54,7 +51,7 @@ class PagesController < ApplicationController
         :B7 => ["B7_front_red.jpg", "B7_angled_red.jpg", "B7_detail_red.jpg"]
       }
 
-    elsif params[:family] == "grey_olive"
+    elsif params[:family] == "collection_a"
       @sub_collection = {
 
         :B1 => ["B1_front.jpg", "B1_back.jpg", "B1_detail.jpg"],
