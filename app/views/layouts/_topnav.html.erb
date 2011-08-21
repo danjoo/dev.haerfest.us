@@ -1,4 +1,32 @@
 <!-- Top Navigation -->
-<%= link_to 'Collections', collections_path %> /
-<%= link_to 'Information', about_path %> /
-<%= link_to 'Contact', contact_path %>
+
+<%= #LINK TO COLLECTIONS AND USES BOLD IMAGE IF CURRENT
+
+   link_to_unless_current "Collections", collections_path do
+     link_to "Static Collections Pic", collections_path
+   end
+
+%>
+
+/
+
+<%= #LINK TO INFORMATION
+
+   link_to_unless ( params[:action] == "about" ||
+                    params[:action] == "stockists"   ||
+                    params[:action] == "inspriation") ,
+                    "Information", about_path do
+     link_to 'Static Information', about_path
+   end
+
+%>
+
+/
+
+<%= #LINK TO CONTACT
+
+   link_to_unless_current "Contact", contact_path do
+     link_to "Static Contact Pic", contact_path
+   end
+
+%>

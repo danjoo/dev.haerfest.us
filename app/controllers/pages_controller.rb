@@ -7,11 +7,64 @@ class PagesController < ApplicationController
   def collections
     @title = "Collections"
 
-    @collection_b = "collection_b.jpg",
-    @grey_olive   = "grey_olive_family.jpg",
-    @navy_slate   = "navy_slate_family.jpg",
-    @carmine_red  = "carmine_red_family.jpg",
-    @collection_a = "collection_a.jpg"
+    if params[:family].nil?
+      params[:family] = "grey_olive"
+    end
+
+    if params[:family] == "grey_olive"
+      #set family parameter
+      params[:family] = "grey_olive"
+      #set cover picture / family
+      @cover = {
+        :image => "grey_olive_family.jpg",
+        :ro_image => "grey_olive_family_ro.jpg"
+      }
+
+    elsif params[:family] == "navy_slate"
+      #set family parameter
+      params[:family] = "navy_slate"
+      #set cover picture / family
+      @cover = {
+        :image => "navy_slate_family.jpg",
+        :ro_image => "navy_slate_family_ro.jpg"
+      }
+
+    elsif params[:family] == "carmine_red"
+      #set family parameter
+      params[:family] = "carmine_red"
+      #set cover picture / family
+      @cover = {
+        :image => "carmine_red_family.jpg",
+        :ro_image => "carmine_red_family_ro.jpg"
+      }
+
+    elsif params[:family] == "collection_a"
+      #set family parameter
+      params[:family] = "collection_a"
+      #set cover picture / family
+      @cover = {
+        :image => "collection_a.jpg",
+        :ro_image => "collection_a_ro.jpg"
+      }
+
+    elsif params[:family] == "collection_b"
+      #set family parameter
+      params[:family] = "grey_olive"
+      #set cover picture / family
+      @cover = {
+        :image => "collection_b.jpg",
+        :ro_image => "collection_b_ro.jpg"
+      }
+    else
+      #set family parameter
+      params[:family] = "grey_olive"
+      #set cover picture / family
+       @cover = {
+        :image => "grey_olive_family.jpg",
+        :ro_image => "grey_olive_family_ro.jpg"
+      }
+
+    end
 
   end
 
@@ -25,7 +78,7 @@ class PagesController < ApplicationController
     @test= params
 
     if params[:family] == "grey_olive"
-      @sub_collection = {
+      @family = {
 
         :B1 => ["B1_front_grey.jpg", "B1_back_grey.jpg", "B1_detail_grey.jpg"],
         :B5 => ["B5_front_grey.jpg", "B5_angled_grey.jpg", "B5_back_grey.jpg"],
@@ -34,7 +87,7 @@ class PagesController < ApplicationController
       }
 
     elsif params[:family] == "navy_slate"
-      @sub_collection = {
+      @family = {
 
         :B1 => ["B1_front_navy.jpg", "B1_back_navy.jpg", "B1_detail_navy.jpg"],
         :B5 => ["B5_front_navy.jpg", "B5_angled_navy.jpg", "B5_back_navy.jpg"],
@@ -43,7 +96,7 @@ class PagesController < ApplicationController
       }
 
     elsif params[:family] == "carmine_red"
-      @sub_collection = {
+      @family = {
 
         :B1 => ["B1_front_red.jpg", "B1_back_red.jpg", "B1_detail_red.jpg"],
         :B5 => ["B5_front_red.jpg", "B5_angled_red.jpg", "B5_back_red.jpg"],
@@ -52,7 +105,7 @@ class PagesController < ApplicationController
       }
 
     elsif params[:family] == "collection_a"
-      @sub_collection = {
+      @family = {
 
         :B1 => ["B1_front.jpg", "B1_back.jpg", "B1_detail.jpg"],
         :B5 => ["B5_front.jpg", "B5_angled.jpg", "B5_back.jpg"],
@@ -61,8 +114,14 @@ class PagesController < ApplicationController
       }
 
     else
-       @sub_collection = {}
-      
+       @family = {
+
+        :B1 => ["B1_front_grey.jpg", "B1_back_grey.jpg", "B1_detail_grey.jpg"],
+        :B5 => ["B5_front_grey.jpg", "B5_angled_grey.jpg", "B5_back_grey.jpg"],
+        :B6 => ["B6_tall_grey.jpg", "B6_angled_grey.jpg", "B6_detail_grey.jpg"],
+        :B7 => ["B7_front_grey.jpg", "B7_angled_grey.jpg", "B7_detail_grey.jpg"]
+      }
+
     end
 
   end

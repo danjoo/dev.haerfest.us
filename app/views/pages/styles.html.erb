@@ -4,12 +4,7 @@
   <a href="http://haerfest.us/about">HAERFEST</a>
 </p>
 
-<% @test.each do |key, value| %>
-  <%= "Key #{key.inspect} has value #{value.inspect}"  %><br/>
-<% end %>
-
-
-<% @sub_collection.each do |key1, value1| %>
+<% @family.each do |key1, value1| %>
   <%= key1.to_s  %><br/>
   <% value1.each do |value2| %>
     <%= value2.to_s  %><br/>

@@ -1,21 +1,18 @@
 <br />
 
 <p>This is the collections page for the brand
-  <a href="http://haerfest.us/about">HAERFEST</a>
+  <a href="http://haerfest.us/about">HAERFEST</a><p/><p/><p/>
+  <%= link_to "#{@cover[:image]}", styles_path(:family => "#{params[:family]}") %>
 </p>
+
+
 
 <div class="bottomnav"">
   <div class="stick_to_bottom">
-      <%= link_to "Collection B", styles_path(:family => "collection_b") %> /
-      <%= link_to "Olive Grey", styles_path(:family => "olive_grey") %> /
-      <%= link_to "Navy Slate", styles_path(:family => "navy_slate") %> /
-      <%= link_to "Carmine Red", styles_path(:family => "carmine_red") %> /
-      <%= link_to "Collection A", styles_path(:family => "collection_a") %> 
+      <%= link_to "Collection B", collections_path(:family => "collection_b") %> /
+      <%= link_to "Grey Olive", collections_path(:family => "grey_olive") %> /
+      <%= link_to "Navy Slate", collections_path(:family => "navy_slate") %> /
+      <%= link_to "Carmine Red", collections_path(:family => "carmine_red") %> /
+      <%= link_to "Collection A", collections_path(:family => "collection_a") %>
   </div>
 </div>
-
-
-<%#= link_to "navy slate",
-            :controller => "pages",
-            :action => "styles",
-            :family => "navy_slate" %>
