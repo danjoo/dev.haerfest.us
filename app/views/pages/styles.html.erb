@@ -1,5 +1,7 @@
 <div class="wrapper">
   <div id="loopedslider">
+    
+    <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
     <div class="slide_container">
       <div class="slides">
 
@@ -18,17 +20,17 @@
       <% end %>
 
       </div>
-
     </div>
+    <%= link_to (image_tag "layout/layout_sidenav_right.png"), "#next", :class => "next" %>
 
     <div class="pagination_container">
       <ul class="pagination">
           <%# displays all the available colors %>
           <% @family.each_with_index() do |(key, value), index| %>
             <% if index == @family.length-1 %>
-              <li><%= link_to "#{key.to_s}","#{key.to_s}" %> </li>
+              <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> </li>
             <% else %>
-              <li><%= link_to "#{key.to_s}","#{key.to_s}" %> / </li>
+              <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> / </li>
             <% end %>
           <% end %>
       </ul>
@@ -36,9 +38,6 @@
   </div>
 </div>
 
-<div>
-
-</div>
 
 <div class="bottomnav">
   <div class="stick_to_bottom">

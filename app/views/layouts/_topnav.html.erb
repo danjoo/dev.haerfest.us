@@ -22,11 +22,8 @@
 
 <%= #LINK TO INFORMATION
 
-   link_to_unless ( params[:action] == "about" ||
-                    params[:action] == "stockists"   ||
-                    params[:action] == "inspriation") ,
-                    information, about_path do
-     link_to information_ul, about_path
+   link_to_unless_current information, information_path do
+     link_to information_ul, information_path
    end
 
 %>

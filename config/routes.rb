@@ -3,6 +3,7 @@ DevHaerfestUs::Application.routes.draw do
   get "pages/home"
   get "pages/collections"
   get "pages/styles"
+  get "pages/information"
   get "pages/about"
   get "pages/stockists"
   get "pages/inspiration"
@@ -13,6 +14,7 @@ DevHaerfestUs::Application.routes.draw do
   match '/home',        :to => 'pages#home'
   match '/collections', :to => 'pages#collections'
   match '/styles',      :to => 'pages#styles'
+  match '/information',       :to => 'pages#information'
   match '/about',       :to => 'pages#about'
   match '/stockists',   :to => 'pages#stockists'
   match '/inspiration',   :to => 'pages#inspiration'

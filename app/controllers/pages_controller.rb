@@ -37,7 +37,7 @@ class PagesController < ApplicationController
     elsif params[:family] == "navy_slate"
       @family = {
 
-        :B1 => ["B1_front_navy.png", "B1_back_navy.png", "B1_detail_navy.png"],
+        :B1 => ["B1_front_navy.png", "B1_back_navy.png", "B1_detail_navy.png","B1_info_navy.png"],
         :B5 => ["B5_front_navy.png", "B5_angled_navy.png", "B5_back_navy.png"],
         :B6 => ["B6_tall_navy.png", "B6_angled_navy.png", "B6_detail_navy.png"],
         :B7 => ["B7_front_navy.png", "B7_angled_navy.png", "B7_detail_navy.png"]
@@ -72,6 +72,10 @@ class PagesController < ApplicationController
 
     end
 
+  end
+
+  def information
+    @title = "Information"
   end
 
   def about

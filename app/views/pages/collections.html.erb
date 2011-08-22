@@ -1,6 +1,8 @@
 
 <div class="wrapper">
   <div id="loopedslider">
+    
+    <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
     <div class="slide_container">
       <div class="slides">
 
@@ -14,15 +16,16 @@
 
       </div>
     </div>
+    <%= link_to (image_tag "layout/layout_sidenav_right.png"), "#next", :class => "next" %>
 
     <div class="pagination_container">
       <ul class="pagination">
           <%# displays all the available colors %>
           <% @cover.each_with_index do |(key_family, value_pic_array),index| %>
             <% if index == @cover.length-1 %>
-            <li><%= link_to "#{key_family.to_s.gsub(/[_]/, ' ')}","#{key_family.to_s}" %></li>
+            <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}" %></li>
             <% else %>
-            <li><%= link_to "#{key_family.to_s.gsub(/[_]/, ' ')}","#{key_family.to_s}" %> / </li>
+            <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}" %> / </li>
             <% end %>
           <% end %>
       </ul>
