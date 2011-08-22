@@ -1,15 +1,41 @@
-<div>
-  <%= link_to (image_tag "#{@cover[:image]}"), styles_path(:family => "#{params[:family]}") %>
+
+<div class="wrapper">
+  <div id="loopedslider">
+    <div class="slide_container">
+      <div class="slides">
+
+      <%# displays all the available colors %>
+      <% @cover.each do |key_family, value_pic_array| %>
+        <div id="<%= key_family.to_s %>" >
+          <%= link_to (image_tag "#{value_pic_array.first}"),
+                       styles_path(:family => "#{key_family.to_s}") %>
+        </div>
+      <% end %>
+
+      </div>
+    </div>
+
+    <div class="pagination_container">
+      <ul class="pagination">
+          <%# displays all the available colors %>
+          <% @cover.each_with_index do |(key_family, value_pic_array),index| %>
+            <% if index == @cover.length-1 %>
+            <li><%= link_to "#{key_family.to_s.gsub(/[_]/, ' ')}","#{key_family.to_s}" %></li>
+            <% else %>
+            <li><%= link_to "#{key_family.to_s.gsub(/[_]/, ' ')}","#{key_family.to_s}" %> / </li>
+            <% end %>
+          <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
-
-
 
 <div class="bottomnav"">
   <div class="stick_to_bottom">
-      <%= link_to "Collection B", collections_path(:family => "collection_b") %> /
-      <%= link_to "Grey Olive", collections_path(:family => "grey_olive") %> /
-      <%= link_to "Navy Slate", collections_path(:family => "navy_slate") %> /
-      <%= link_to "Carmine Red", collections_path(:family => "carmine_red") %> /
-      <%= link_to "Collection A", collections_path(:family => "collection_a") %>
+      <%#= link_to "Collection B", collections_path(:family => "collection_b") %> 
+      <%#= link_to "Grey Olive", collections_path(:family => "grey_olive") %> 
+      <%#= link_to "Navy Slate", collections_path(:family => "navy_slate") %> 
+      <%#= link_to "Carmine Red", collections_path(:family => "carmine_red") %> 
+      <%#= link_to "Collection A", collections_path(:family => "collection_a") %>
   </div>
 </div>

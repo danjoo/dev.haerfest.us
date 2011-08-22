@@ -1,26 +1,47 @@
-<div>
-<% @family.each do |key1, value1| %>
-  <% value1.each do |value2| %>
-    <div id="<%= key1.to_s %>" >
-    <% if value1.index("#{value2}") == 0 %>
-      <%= link_to (image_tag "collections/#{params[:family]}/#{key1.to_s}/#{value2.to_s}"),
-                   "images/collections/#{params[:family]}/#{key1.to_s}/#{value2.to_s}" %>
-    <% else %>
-      <% "<a href=\"images/collections/#{params[:family]}/#{key1.to_s}/#{value2.to_s}""  ></a>" %>
-    <% end %>
+<div class="wrapper">
+  <div id="loopedslider">
+    <div class="slide_container">
+      <div class="slides">
+
+      <%# displays all the available colors %>
+      <% @family.each do |key1, value1| %>
+        <div id="<%= key1.to_s %>" >
+          <% value1.each do |value2| %>
+            <% if value1.index("#{value2}") == 0 %>
+              <%= link_to (image_tag "collections/#{params[:family]}/#{key1.to_s}/#{value2.to_s}"),
+                           "images/collections/#{params[:family]}/#{key1.to_s}/#{value2.to_s}" %>
+            <% else %>
+              <a href="images/collections/<%= "#{params[:family]}/#{key1.to_s}/#{value2.to_s}" %>"></a>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+
+      </div>
+
     </div>
-  <% end %>
-<% end %>
+
+    <div class="pagination_container">
+      <ul class="pagination">
+          <%# displays all the available colors %>
+          <% @family.each_with_index() do |(key, value), index| %>
+            <% if index == @family.length-1 %>
+              <li><%= link_to "#{key.to_s}","#{key.to_s}" %> </li>
+            <% else %>
+              <li><%= link_to "#{key.to_s}","#{key.to_s}" %> / </li>
+            <% end %>
+          <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div>
+
 </div>
 
 <div class="bottomnav">
   <div class="stick_to_bottom">
-    <% @family.each_with_index() do |(key, value), index| %>
-      <% if index == @family.length-1 %>
-        <%= key.to_s  %>  
-      <% else %>
-        <%= key.to_s  %> /
-      <% end %>
-    <% end %>
+
   </div>
 </div>

@@ -7,64 +7,12 @@ class PagesController < ApplicationController
   def collections
     @title = "Collections"
 
-    if params[:family].nil?
-      params[:family] = "grey_olive"
-    end
-
-    if params[:family] == "grey_olive"
-      #set family parameter
-      params[:family] = "grey_olive"
-      #set cover picture / family
-      @cover = {
-        :image => "collections/grey_olive_family.png",
-        :ro_image => "collections/grey_olive_family_ro.png"
-      }
-
-    elsif params[:family] == "navy_slate"
-      #set family parameter
-      params[:family] = "navy_slate"
-      #set cover picture / family
-      @cover = {
-        :image => "collections/navy_slate_family.png",
-        :ro_image => "collections/navy_slate_family_ro.png"
-      }
-
-    elsif params[:family] == "carmine_red"
-      #set family parameter
-      params[:family] = "carmine_red"
-      #set cover picture / family
-      @cover = {
-        :image => "collections/carmine_red_family.png",
-        :ro_image => "collections/carmine_red_family_ro.png"
-      }
-
-    elsif params[:family] == "collection_a"
-      #set family parameter
-      params[:family] = "collection_a"
-      #set cover picture / family
-      @cover = {
-        :image => "collections/collection_a.png",
-        :ro_image => "collections/collection_a_ro.png"
-      }
-
-    elsif params[:family] == "collection_b"
-      #set family parameter
-      params[:family] = "grey_olive"
-      #set cover picture / family
-      @cover = {
-        :image => "collections/collection_b.png",
-        :ro_image => "collections/collection_b_ro.png"
-      }
-    else
-      #set family parameter
-      params[:family] = "grey_olive"
-      #set cover picture / family
-       @cover = {
-        :image => "collections/grey_olive_family.png",
-        :ro_image => "collections/grey_olive_family_ro.png"
-      }
-
-    end
+    @cover = {
+      :grey_olive => ["collections/grey_olive_family.png", "collections/grey_olive_family_ro.png"],
+      :navy_slate => ["collections/navy_slate_family.png", "collections/navy_slate_family_ro.png"],
+      :carmine_red => ["collections/carmine_red_family.png", "collections/carmine_red_family_ro.png"],
+      :collection_a => ["collections/collection_a.png", "collections/collection_a_ro.png"]
+    }
 
   end
 
