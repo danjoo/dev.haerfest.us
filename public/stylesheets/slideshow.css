@@ -1,0 +1,18 @@
+/*** set the width and height to match your images **/
+
+#slideshow {
+}
+
+#slideshow IMG {
+    opacity:0.0;
+    cursor:pointer;
+}
+
+#slideshow IMG.active {
+    opacity:1.0;
+    cursor:pointer;
+}
+
+#slideshow IMG.last-active {
+    cursor:pointer;
+}
