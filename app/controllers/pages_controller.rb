@@ -16,8 +16,8 @@ class PagesController < ApplicationController
       params[:family] = "grey_olive"
       #set cover picture / family
       @cover = {
-        :image => "grey_olive_family.jpg",
-        :ro_image => "grey_olive_family_ro.jpg"
+        :image => "collections/grey_olive_family.png",
+        :ro_image => "collections/grey_olive_family_ro.png"
       }
 
     elsif params[:family] == "navy_slate"
@@ -25,8 +25,8 @@ class PagesController < ApplicationController
       params[:family] = "navy_slate"
       #set cover picture / family
       @cover = {
-        :image => "navy_slate_family.jpg",
-        :ro_image => "navy_slate_family_ro.jpg"
+        :image => "collections/navy_slate_family.png",
+        :ro_image => "collections/navy_slate_family_ro.png"
       }
 
     elsif params[:family] == "carmine_red"
@@ -34,8 +34,8 @@ class PagesController < ApplicationController
       params[:family] = "carmine_red"
       #set cover picture / family
       @cover = {
-        :image => "carmine_red_family.jpg",
-        :ro_image => "carmine_red_family_ro.jpg"
+        :image => "collections/carmine_red_family.png",
+        :ro_image => "collections/carmine_red_family_ro.png"
       }
 
     elsif params[:family] == "collection_a"
@@ -43,8 +43,8 @@ class PagesController < ApplicationController
       params[:family] = "collection_a"
       #set cover picture / family
       @cover = {
-        :image => "collection_a.jpg",
-        :ro_image => "collection_a_ro.jpg"
+        :image => "collections/collection_a.png",
+        :ro_image => "collections/collection_a_ro.png"
       }
 
     elsif params[:family] == "collection_b"
@@ -52,16 +52,16 @@ class PagesController < ApplicationController
       params[:family] = "grey_olive"
       #set cover picture / family
       @cover = {
-        :image => "collection_b.jpg",
-        :ro_image => "collection_b_ro.jpg"
+        :image => "collections/collection_b.png",
+        :ro_image => "collections/collection_b_ro.png"
       }
     else
       #set family parameter
       params[:family] = "grey_olive"
       #set cover picture / family
        @cover = {
-        :image => "grey_olive_family.jpg",
-        :ro_image => "grey_olive_family_ro.jpg"
+        :image => "collections/grey_olive_family.png",
+        :ro_image => "collections/grey_olive_family_ro.png"
       }
 
     end
@@ -80,46 +80,46 @@ class PagesController < ApplicationController
     if params[:family] == "grey_olive"
       @family = {
 
-        :B1 => ["B1_front_grey.jpg", "B1_back_grey.jpg", "B1_detail_grey.jpg"],
-        :B5 => ["B5_front_grey.jpg", "B5_angled_grey.jpg", "B5_back_grey.jpg"],
-        :B6 => ["B6_tall_grey.jpg", "B6_angled_grey.jpg", "B6_detail_grey.jpg"],
-        :B7 => ["B7_front_grey.jpg", "B7_angled_grey.jpg", "B7_detail_grey.jpg"]
+        :B1 => ["B1_front_grey.png", "B1_back_grey.png", "B1_detail_grey.png"],
+        :B5 => ["B5_front_grey.png", "B5_angled_grey.png", "B5_back_grey.png"],
+        :B6 => ["B6_tall_grey.png", "B6_angled_grey.png", "B6_detail_grey.png"],
+        :B7 => ["B7_front_grey.png", "B7_angled_grey.png", "B7_detail_grey.png"]
       }
 
     elsif params[:family] == "navy_slate"
       @family = {
 
-        :B1 => ["B1_front_navy.jpg", "B1_back_navy.jpg", "B1_detail_navy.jpg"],
-        :B5 => ["B5_front_navy.jpg", "B5_angled_navy.jpg", "B5_back_navy.jpg"],
-        :B6 => ["B6_tall_navy.jpg", "B6_angled_navy.jpg", "B6_detail_navy.jpg"],
-        :B7 => ["B7_front_navy.jpg", "B7_angled_navy.jpg", "B7_detail_navy.jpg"]
+        :B1 => ["B1_front_navy.png", "B1_back_navy.png", "B1_detail_navy.png"],
+        :B5 => ["B5_front_navy.png", "B5_angled_navy.png", "B5_back_navy.png"],
+        :B6 => ["B6_tall_navy.png", "B6_angled_navy.png", "B6_detail_navy.png"],
+        :B7 => ["B7_front_navy.png", "B7_angled_navy.png", "B7_detail_navy.png"]
       }
 
     elsif params[:family] == "carmine_red"
       @family = {
 
-        :B1 => ["B1_front_red.jpg", "B1_back_red.jpg", "B1_detail_red.jpg"],
-        :B5 => ["B5_front_red.jpg", "B5_angled_red.jpg", "B5_back_red.jpg"],
-        :B6 => ["B6_tall_red.jpg", "B6_angled_red.jpg", "B6_detail_red.jpg"],
-        :B7 => ["B7_front_red.jpg", "B7_angled_red.jpg", "B7_detail_red.jpg"]
+        :B1 => ["B1_front_red.png", "B1_back_red.png", "B1_detail_red.png"],
+        :B5 => ["B5_front_red.png", "B5_angled_red.png", "B5_back_red.png"],
+        :B6 => ["B6_tall_red.png", "B6_angled_red.png", "B6_detail_red.png"],
+        :B7 => ["B7_front_red.png", "B7_angled_red.png", "B7_detail_red.png"]
       }
 
     elsif params[:family] == "collection_a"
       @family = {
 
-        :B1 => ["B1_front.jpg", "B1_back.jpg", "B1_detail.jpg"],
-        :B5 => ["B5_front.jpg", "B5_angled.jpg", "B5_back.jpg"],
-        :B6 => ["B6_tall.jpg", "B6_angled.jpg", "B6_detail.jpg"],
-        :B7 => ["B7_front.jpg", "B7_angled.jpg", "B7_detail.jpg"]
+        :B1 => ["B1_front.png", "B1_back.png", "B1_detail.png"],
+        :B5 => ["B5_front.png", "B5_angled.png", "B5_back.png"],
+        :B6 => ["B6_tall.png", "B6_angled.png", "B6_detail.png"],
+        :B7 => ["B7_front.png", "B7_angled.png", "B7_detail.png"]
       }
 
     else
        @family = {
 
-        :B1 => ["B1_front_grey.jpg", "B1_back_grey.jpg", "B1_detail_grey.jpg"],
-        :B5 => ["B5_front_grey.jpg", "B5_angled_grey.jpg", "B5_back_grey.jpg"],
-        :B6 => ["B6_tall_grey.jpg", "B6_angled_grey.jpg", "B6_detail_grey.jpg"],
-        :B7 => ["B7_front_grey.jpg", "B7_angled_grey.jpg", "B7_detail_grey.jpg"]
+        :B1 => ["B1_front_grey.png", "B1_back_grey.png", "B1_detail_grey.png"],
+        :B5 => ["B5_front_grey.png", "B5_angled_grey.png", "B5_back_grey.png"],
+        :B6 => ["B6_tall_grey.png", "B6_angled_grey.png", "B6_detail_grey.png"],
+        :B7 => ["B7_front_grey.png", "B7_angled_grey.png", "B7_detail_grey.png"]
       }
 
     end

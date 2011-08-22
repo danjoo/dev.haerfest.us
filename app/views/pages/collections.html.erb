@@ -1,9 +1,6 @@
-<br />
-
-<p>This is the collections page for the brand
-  <a href="http://haerfest.us/about">HAERFEST</a><p/><p/><p/>
-  <%= link_to "#{@cover[:image]}", styles_path(:family => "#{params[:family]}") %>
-</p>
+<div>
+  <%= link_to (image_tag "#{@cover[:image]}"), styles_path(:family => "#{params[:family]}") %>
+</div>
 
 
 
