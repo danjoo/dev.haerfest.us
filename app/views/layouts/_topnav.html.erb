@@ -1,32 +1,42 @@
+<!-- image variables -->
+<% logo = image_tag("logo.png", :alt => "Home") %>
+<% collections = image_tag("layout/layout_topnav_collection.png", :alt => "Collections") %>
+<% collections_ul = image_tag("layout/layout_topnav_collection_ul.png", :alt => "Collections") %>
+<% information = image_tag("layout/layout_topnav_information.png", :alt => "Information") %>
+<% information_ul = image_tag("layout/layout_topnav_information_ul.png", :alt => "Information") %>
+<% contact = image_tag("layout/layout_topnav_contact.png", :alt => "Contact") %>
+<% contact_ul = image_tag("layout/layout_topnav_contact_ul.png", :alt => "Contact") %>
+<% slash = image_tag("layout/layout_topnav_slash.png", :alt => "/") %>
+
 <!-- Top Navigation -->
 
 <%= #LINK TO COLLECTIONS AND USES BOLD IMAGE IF CURRENT
 
-   link_to_unless_current "Collections", collections_path do
-     link_to "Static Collections Pic", collections_path
+   link_to_unless_current collections, collections_path do
+     link_to collections_ul, collections_path
    end
 
 %>
 
-/
+<%= slash %>
 
 <%= #LINK TO INFORMATION
 
    link_to_unless ( params[:action] == "about" ||
                     params[:action] == "stockists"   ||
                     params[:action] == "inspriation") ,
-                    "Information", about_path do
-     link_to 'Static Information', about_path
+                    information, about_path do
+     link_to information_ul, about_path
    end
 
 %>
 
-/
+<%= slash %>
 
 <%= #LINK TO CONTACT
 
-   link_to_unless_current "Contact", contact_path do
-     link_to "Static Contact Pic", contact_path
+   link_to_unless_current contact, contact_path do
+     link_to contact_ul, contact_path
    end
 
 %>
