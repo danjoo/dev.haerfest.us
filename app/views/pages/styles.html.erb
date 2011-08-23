@@ -10,10 +10,10 @@
         <div id="<%= key1.to_s %>" >
           <% value1.each do |value2| %>
             <% if value1.index("#{value2}") == 0 %>
-              <%= link_to (image_tag "collections/#{params[:family]}/#{key1.to_s}/#{value2.to_s}"),
-                           "images/collections/#{params[:family]}/#{key1.to_s}/#{value2.to_s}" %>
+              <%= link_to (image_tag "collections/#{params[:family]}/#{value2.to_s}"),
+                           "images/collections/#{params[:family]}/#{value2.to_s}" %>
             <% else %>
-              <a href="images/collections/<%= "#{params[:family]}/#{key1.to_s}/#{value2.to_s}" %>"></a>
+              <a href="images/collections/<%= "#{params[:family]}/#{value2.to_s}" %>"></a>
             <% end %>
           <% end %>
         </div>
