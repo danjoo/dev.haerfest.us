@@ -12,7 +12,9 @@
 
 <%= #LINK TO COLLECTIONS AND USES BOLD IMAGE IF CURRENT
 
-   link_to_unless_current collections, collections_path do
+   link_to_unless ( params[:action] == "collections" ||
+                    params[:action] == "styles") ,
+                    collections, collections_path do
      link_to collections_ul, collections_path
    end
 
