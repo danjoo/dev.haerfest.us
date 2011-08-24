@@ -9,7 +9,7 @@ DevHaerfestUs::Application.routes.draw do
   get "pages/inspiration"
   get "pages/contact"
 
-  root :to => "pages#home"
+  root :to => "pages#collections"
   match '/',            :to => 'pages#collections'
   match '/home',        :to => 'pages#collections'
   match '/collections', :to => 'pages#collections'
