@@ -3,15 +3,14 @@ $(function(){
 $('.meerkat').meerkat({
 
 	background: '#fff repeat-x left top',
-	height: '476px',
+	height: '496px',
 	width: '100%',
 	position: 'center',
-	dontShowAgain: '#enter',
+	cookieExpires: 0,
 	animationIn: 'none',
 	animationOut: 'fade',
 	animationSpeed: 500,
-	timer: 2.5,
-	removeCookie: '.reset'
+	timer: 2.0
 
             });
 

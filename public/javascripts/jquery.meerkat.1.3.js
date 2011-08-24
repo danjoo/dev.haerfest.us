@@ -146,9 +146,9 @@ jQuery.fn.extend({
 				}
 
 
-				jQuery('html, body').css({'margin':'0', 'height':'100%'});
+				jQuery('html, body').css({'height':'100%'});
 				jQuery(element).wrap('<div id="meerkat-wrap"><div id="meerkat-container"></div></div>');
-				jQuery('#meerkat-wrap').css({'position':'fixed', 'z-index': '10000', 'width': settings.width, 'height': settings.height}).css(settings.position, "0");
+				jQuery('#meerkat-wrap').css({'position':'absolute', 'z-index': '10000', 'width': settings.width, 'height': settings.height}).css(settings.position, "0");
 				jQuery('#meerkat-container').css({'background': settings.background, 'height': settings.height});
 
 				if(settings.position === "left" || settings.position === "right"){ jQuery('#meerkat-wrap').css("top", 0);}
