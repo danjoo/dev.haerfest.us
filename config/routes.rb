@@ -4,9 +4,6 @@ DevHaerfestUs::Application.routes.draw do
   get "pages/collections"
   get "pages/styles"
   get "pages/information"
-  get "pages/about"
-  get "pages/stockists"
-  get "pages/inspiration"
   get "pages/contact"
 
   root :to => "pages#collections"
@@ -14,10 +11,7 @@ DevHaerfestUs::Application.routes.draw do
   match '/home',        :to => 'pages#collections'
   match '/collections', :to => 'pages#collections'
   match '/styles',      :to => 'pages#styles'
-  match '/information',       :to => 'pages#information'
-  match '/about',       :to => 'pages#about'
-  match '/stockists',   :to => 'pages#stockists'
-  match '/inspiration',   :to => 'pages#inspiration'
+  match '/information', :to => 'pages#information'
   match '/contact',     :to => 'pages#contact'
 
   # The priority is based upon order of creation:

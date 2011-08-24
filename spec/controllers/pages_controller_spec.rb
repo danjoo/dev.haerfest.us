@@ -64,45 +64,6 @@ describe PagesController do
     end
   end
 
-  describe "GET 'about'" do
-    it "should be successful" do
-      get 'about'
-      response.should be_success
-    end
-
-    it "should have the right title" do
-      get 'about'
-      response.should have_selector("title",
-                                    :content => "#{@basetitle} | About")
-    end
-  end
-
-  describe "GET 'stockists'" do
-    it "should be successful" do
-      get 'stockists'
-      response.should be_success
-    end
-
-    it "should have the right title" do
-      get 'stockists'
-      response.should have_selector("title",
-                                    :content => "#{@basetitle} | Stockists")
-    end
-  end
-
-  describe "GET 'inspiration'" do
-    it "should be successful" do
-      get 'inspiration'
-      response.should be_success
-    end
-
-    it "should have the right title" do
-      get 'inspiration'
-      response.should have_selector("title",
-                                    :content => "#{@basetitle} | Inspiration")
-    end
-  end
-
   describe "GET 'contact'" do
     it "should be successful" do
       get 'contact'
