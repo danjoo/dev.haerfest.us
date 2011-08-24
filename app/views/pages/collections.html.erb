@@ -35,6 +35,7 @@
 
     <div class ="bottomnav">
       <div class="pagination_container">
+      <%= link_to "COLLECTION B",home_path %> / 
         <ul class="pagination">
             <%# displays all the available colors %>
             <% @cover.each_with_index do |(key_family, value_pic_array),index| %>
