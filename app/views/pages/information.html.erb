@@ -1,35 +1,48 @@
 <div class="wrapper">
   <div id="loopedslider">
 
-    <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
-    <div class="slide_container">
-      <div class="slides">
+    <div class ="center_container">
+      <div class ="left_container">
+        <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
+      </div>
 
-        <%# displays about %>
-        <div id="about">
-          <%= render "pages/about" %>
-        </div>
+      <div class ="window_container">
+        <div class="slide_container">
+          <div class="slides">
 
-        <%# displays stockists %>
-        <div id="stockists">
-          <%= render "pages/stockists" %>
-        </div>
+            <%# displays about %>
+            <div id="about">
+              <%= render "pages/about" %>
+            </div>
 
-        <%# displays inspiration %>
-        <div id="inspiration">
-          <%= render "pages/inspiration" %>
-        </div>
+            <%# displays stockists %>
+            <div id="stockists">
+              <%= render "pages/stockists" %>
+            </div>
 
+            <%# displays inspiration %>
+            <div id="inspiration">
+              <%= render "pages/inspiration" %>
+            </div>
+          </div>
+        </div><!-- end slide container -->
+      </div>
+
+      <div class ="right_container">
+        <%= link_to (image_tag "layout/layout_sidenav_right.png"), "#next", :class => "next" %>
       </div>
     </div>
-    <%= link_to (image_tag "layout/layout_sidenav_right.png"), "#next", :class => "next" %>
 
-    <div class="pagination_container">
-      <ul class="pagination">
-        <li><%= link_to "ABOUT","#about" %> / </li>
-        <li><%= link_to "STOCKISTS","#stockists" %> / </li>
-        <li><%= link_to "INSPIRATION","#inspiration" %>   </li>
-      </ul>
+    <div class ="bottomnav">
+      <div class="pagination_container">
+        <ul class="pagination">
+          <li><%= link_to "ABOUT","#about" %> / </li>
+          <li><%= link_to "STOCKISTS","#stockists" %> / </li>
+          <li><%= link_to "INSPIRATION","#inspiration" %>   </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</div>
+
+  </div> <!-- end looped slider -->
+</div> <!-- end wrapper -->
+

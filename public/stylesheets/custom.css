@@ -1,3 +1,52 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /*
     Document   : custom
     Created on : Dec 23, 2010, 5:47:16 PM
@@ -12,66 +61,98 @@
 }*/
 
 
-.header {
+.main {
+  position:relative;
+  width:1024px;
+  height:768px;
   text-align: center;
-  margin-bottom: 20px;
+  font-family: "Century Gothic", "sans-serif";
+  margin:0 auto;
 }
 
-.verbage,.verbage img {
-  font-size: 12px;
-/*  font-family: 'Times New Roman', "serif";*/
-  color: white;
-  font-family: "Century Gothic", "sans-serif";
-  text-align: left;
-  vertical-align:text-bottom;
-  margin-left: 5ex;
-  margin-top: 4.5ex;
+.header {
+  position:relative;
+  overflow:hidden;
+  width:1024px;
+  height:50px;
+}
+
+.header a{
+  width:100%;
+  position:absolute;
+  bottom:0;
+}
+
+.topnav {
+  position:relative;
+  overflow:hidden;
+  width:1024px;
+  height:62px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .container {
-/*  text-align: center;
-  font-family: "Century Gothic", "sans-serif";
-  height:540px;
+  position:relative;
   overflow:hidden;
+  height:590px; 
+}
+
+.center_container{
   position:relative;
-  text-align: center;
-  margin:0 auto;
+  overflow:hidden;
+  height:496px;
+}
+
+.left_container{
+  position:relative;
+  float:left;
+  overflow:hidden;
+  width:140px;
+}
+
+.window_container{
+  position:relative;
+	float:left;
+  overflow:hidden;
   width:745px;
+}
+
+
+.window_container{
   position:relative;
-  clear:both;
-  position:absolute;
-  top:0;
-  width:675px;
-  display:none;*/
+	float:left;
+  overflow:hidden;
+  width:745px;
 }
 
-.stick_to_bottom {
-width:100%;
-position:absolute;
-bottom:0;
-text-align:center;
+.contact_container{
+  position:relative;
+  overflow:hidden;
+  width:1024px;
+  height:496px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.haerfest_footer {
-  text-align: center;
-  margin-top: 8ex;
-  margin-left: auto;
-  margin-right: auto;
+.bottomnav {
+  position:relative;
+  overflow:hidden;
+  margin-bottom: 7px;
+  width:1024px;
+  height:94px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.footer {
+  position:relative;
+  overflow:hidden;
+  margin-top: 5px;
+  height:64px;
   font-family: "Century Gothic", "sans-serif";
   color: #888888;
   font-size: 65%;
-}
-
-
-/* Image */
-
-
-/* Round corners */
-
-.round {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-  border-radius:         10px;
 }
 
 
@@ -92,49 +173,15 @@ a:visited {
   color: black;
 }
 
+/* splash */
 
-/* Navigation Links */
-
-.topnav {
-  float: none;
+.splash {
   text-align: center;
-  font-family: "Century Gothic", "sans-serif";
-  background-color: white;
-  height:34px;
-  /* padding: 0 0.7em; */
-  border-style: none;
-  white-space: nowrap;
+  /* vertical-align:middle;*/
+  
 }
 
-.bottomnav {
-  float: none;
-  text-align: center;
-  font-family: "Century Gothic", "sans-serif";
-  background-color: white;
-  height:34px;
-  /* padding: 0 0.7em; */
-  border-style: none;
-  white-space: nowrap;
-}
-.topnav a, .bottomnav a {
-  /* color: #09c; */
-  text-decoration: none;
-}
-
-.topnav a:hover, .bottomnav a:hover {
-  /* color: #069; */
-  text-decoration: underline;
-}
-
-.topnav a:visited, .bottomnav a:hover {
-  /* color: #069; */
-  text-decoration: none;
-}
-
-
-
-
-/* table */
+/* slider */
 
 
 section .table {
@@ -142,25 +189,17 @@ section .table {
   border-width: 1px;
 }
 
-.splash {
-  text-align: center;
-  /* vertical-align:middle;*/
-}
-
-
 #loopedslider {
-  margin:0 auto;
-  width:745px;
   position:relative;
+  margin:0 auto;
+  width:1024px;
   clear:both;
 }
 
 .slide_container {
-/*    width:800px;*/
-  height:540px;
-  overflow:hidden;
   position:relative;
-  text-align: center;
+  overflow:hidden;
+  height:496px;
 }
 
 .slides {
@@ -170,16 +209,20 @@ section .table {
 }
 .slides > div {
   position:absolute;
+  width:745px;
   top:0;
-  width:675px;
   display:none;
 }
+
+
+/* pagination */
+
 
 .pagination_container {
   text-align: center;
   margin-top: 10px;
-  font-size: 100%;
-	word-spacing: 8px;
+  font-size: 11px;
+	word-spacing: 3px;
   font-family: "Century Gothic", "sans-serif";
 }
 

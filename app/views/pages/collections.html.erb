@@ -1,44 +1,47 @@
-
 <div class="wrapper">
   <div id="loopedslider">
     
-    <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
-    <div class="slide_container">
-      <div class="slides">
+    <div class ="center_container">
+      <div class ="left_container">
+        <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
+      </div>
 
-      <%# displays all the available colors %>
-      <% @cover.each do |key_family, value_pic_array| %>
-        <div id="<%= key_family.to_s %>" >
-          <%= link_to (image_tag "#{value_pic_array.first}"),
-                       styles_path(:family => "#{key_family.to_s}") %>
-        </div>
-      <% end %>
+      <div class ="window_container">
+        <div class="slide_container">
+          <div class="slides">
 
+          <%# displays all the available colors %>
+          <% @cover.each do |key_family, value_pic_array| %>
+            <div id="<%= key_family.to_s %>" >
+              <%= link_to (image_tag "#{value_pic_array.first}"),
+                           styles_path(:family => "#{key_family.to_s}") %>
+            </div>
+          <% end %>
+
+          </div>
+        </div><!-- end slide container -->
+      </div>
+
+      <div class ="right_container">
+        <%= link_to (image_tag "layout/layout_sidenav_right.png"), "#next", :class => "next" %>
       </div>
     </div>
-    <%= link_to (image_tag "layout/layout_sidenav_right.png"), "#next", :class => "next" %>
 
-    <div class="pagination_container">
-      <ul class="pagination">
-          <%# displays all the available colors %>
-          <% @cover.each_with_index do |(key_family, value_pic_array),index| %>
-            <% if index == @cover.length-1 %>
-            <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}" %></li>
-            <% else %>
-            <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}" %> / </li>
+    <div class ="bottomnav">
+      <div class="pagination_container">
+        <ul class="pagination">
+            <%# displays all the available colors %>
+            <% @cover.each_with_index do |(key_family, value_pic_array),index| %>
+              <% if index == @cover.length-1 %>
+              <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}" %></li>
+              <% else %>
+              <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}" %> / </li>
+              <% end %>
             <% end %>
-          <% end %>
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="bottomnav"">
-  <div class="stick_to_bottom">
-      <%#= link_to "Collection B", collections_path(:family => "collection_b") %> 
-      <%#= link_to "Grey Olive", collections_path(:family => "grey_olive") %> 
-      <%#= link_to "Navy Slate", collections_path(:family => "navy_slate") %> 
-      <%#= link_to "Carmine Red", collections_path(:family => "carmine_red") %> 
-      <%#= link_to "Collection A", collections_path(:family => "collection_a") %>
-  </div>
-</div>
+  </div> <!-- end looped slider -->
+</div> <!-- end wrapper -->
+

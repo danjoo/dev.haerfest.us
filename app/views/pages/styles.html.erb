@@ -1,46 +1,55 @@
 <div class="wrapper">
   <div id="loopedslider">
-    
-    <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
-    <div class="slide_container">
-      <div class="slides">
 
-      <%# displays all the available colors %>
-      <% @family.each do |key1, value1| %>
-        <div id="<%= key1.to_s %>" >
-          <% value1.each do |value2| %>
-            <% if value1.index("#{value2}") == 0 %>
-              <%= link_to (image_tag "collections/#{params[:family]}/#{value2.to_s}"),
-                           "images/collections/#{params[:family]}/#{value2.to_s}" %>
-            <% else %>
-              <a href="images/collections/<%= "#{params[:family]}/#{value2.to_s}" %>"></a>
+    <div class ="center_container">
+      <div class ="left_container">
+        <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
+      </div>
+
+      <div class ="window_container">
+        <div class="slide_container">
+          <div class="slides">
+
+            <%# displays all the available styles %>
+            <% @family.each do |key1, value1| %>
+              <div id="<%= key1.to_s %>" >
+                <% value1.each do |value2| %>
+                  <% if value1.index("#{value2}") == 0 %>
+                    <%= link_to (image_tag "collections/#{params[:family]}/#{value2.to_s}"),
+                                 "images/collections/#{params[:family]}/#{value2.to_s}" %>
+                  <% else %>
+                    <a href="images/collections/<%= "#{params[:family]}/#{value2.to_s}" %>"></a>
+                  <% end %>
+                <% end %>
+              </div>
             <% end %>
-          <% end %>
-        </div>
-      <% end %>
 
+          </div>
+        </div><!-- end slide container -->
+      </div>
+
+      <div class ="right_container">
+        <%= link_to (image_tag "layout/layout_sidenav_right.png"), "#next", :class => "next" %>
       </div>
     </div>
-    <%= link_to (image_tag "layout/layout_sidenav_right.png"), "#next", :class => "next" %>
 
-    <div class="pagination_container">
-      <ul class="pagination">
-          <%# displays all the available colors %>
-          <% @family.each_with_index() do |(key, value), index| %>
-            <% if index == @family.length-1 %>
-              <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> </li>
-            <% else %>
-              <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> / </li>
+    <div class ="bottomnav">
+      <div class="pagination_container">
+        <ul class="pagination">
+            <%# displays all the available colors %>
+            <% @family.each_with_index() do |(key, value), index| %>
+              <% if index == @family.length-1 %>
+                <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> </li>
+              <% else %>
+                <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> / </li>
+              <% end %>
             <% end %>
-          <% end %>
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</div>
+
+  </div> <!-- end looped slider -->
+</div> <!-- end wrapper -->
 
 
-<div class="bottomnav">
-  <div class="stick_to_bottom">
 
-  </div>
-</div>
