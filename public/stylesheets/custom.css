@@ -16,7 +16,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
+	margin: auto;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -29,8 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-  margin: 0;
-  padding: 0;
+	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -72,7 +71,7 @@ table {
   overflow:hidden;
   width:1024px;
   height:768px;
-  margin:0 auto;
+  margin: auto;
 }
 
 .header {
