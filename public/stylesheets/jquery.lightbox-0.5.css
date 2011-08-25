@@ -13,8 +13,8 @@
  */
 #jquery-overlay {
 	position: fixed !important; /*important param overrides*/
-	top: 0;
-	left: 0;
+	top: 0 !important;
+	left: 0 !important;
 	z-index: 90;
 	/* width: 1024px !important; // no need for width since fixed pos*/
 	height: 768px;
