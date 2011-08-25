@@ -90,6 +90,43 @@ table {
   height:62px;
   display: table-cell;
   vertical-align: middle;
+
+}
+
+.topnav_slash {
+  position:relative;
+  float: left;
+  display: block;
+  overflow:hidden;
+  text-align: center;
+  width:10px;
+}
+
+.topnav_collections {
+  position:relative;
+  float: left;
+  display: block;
+  overflow:hidden;
+  text-align: right;
+  width:460px;
+}
+
+.topnav_informtion {
+  position:relative;
+  float: left;
+  display: block;
+  overflow:hidden;
+  text-align: left;
+  width:94px;
+}
+
+.topnav_contact {
+  position:relative;
+  float: left;
+  display: block;
+  overflow:hidden;
+  text-align: left;
+  width:450px;
 }
 
 .container {
