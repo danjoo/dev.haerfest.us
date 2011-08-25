@@ -40,9 +40,13 @@
             <%# displays all the available colors %>
             <% @cover.each_with_index do |(key_family, value_pic_array),index| %>
               <% if index == @cover.length-1 %>
-              <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}" %></li>
+              <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}",
+                               :id => "#{key_family.to_s }" %>
+              </li>
               <% else %>
-              <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}" %> / </li>
+              <li><%= link_to "#{key_family.to_s.upcase.gsub(/[_]/, ' ')}","#{key_family.to_s}",
+                               :id => "#{key_family.to_s }" %>
+              / </li>
               <% end %>
             <% end %>
         </ul>
