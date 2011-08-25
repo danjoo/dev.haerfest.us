@@ -1,9 +1,9 @@
 /*
- * 	loopedSlider 0.5.6 - jQuery plugin
- *	written by Nathan Searles	
+ * 	loopedSlider 0.5.7 - jQuery plugin
+ *	written by Nathan Searles
  *	http://nathansearles.com/loopedslider/
  *
- *	Copyright (c) 2009 Nathan Searles (http://nathansearles.com/)
+ *	Copyright (c) 2010 Nathan Searles (http://nathansearles.com/)
  *	Dual licensed under the MIT (MIT-LICENSE.txt)
  *	and GPL (GPL-LICENSE.txt) licenses.
  *
@@ -16,17 +16,17 @@
 /*
  *	markup example for $("#loopedSlider").loopedSlider();
  *
- *	<div id="loopedSlider">	
+ *	<div id="loopedSlider">
  *		<div class="container">
  *			<div class="slides">
- *				<div><img src="01.jpg" alt="" /></div>
- *				<div><img src="02.jpg" alt="" /></div>
- *				<div><img src="03.jpg" alt="" /></div>
- *				<div><img src="04.jpg" alt="" /></div>
+ *				<div><img src="01.jpg"></div>
+ *				<div><img src="02.jpg"></div>
+ *				<div><img src="03.jpg"></div>
+ *				<div><img src="04.jpg"></div>
  *			</div>
  *		</div>
  *		<a href="#" class="previous">previous</a>
- *		<a href="#" class="next">next</a>	
+ *		<a href="#" class="next">next</a>
  *	</div>
  *
 */
@@ -36,13 +36,13 @@ if(typeof jQuery != 'undefined') {
 		$.fn.extend({
 			loopedSlider: function(options) {
 				var settings = $.extend({}, $.fn.loopedSlider.defaults, options);
-			
+
 				return this.each(
 					function() {
 					if($.fn.jquery < '1.3.2') {return;}
 					var $t = $(this);
 					var o = $.metadata ? $.extend({}, settings, $t.metadata()) : settings;
-					
+
 					var distance = 0;
 					var times = 1;
 					var slides = $(o.slides,$t).children().size();
@@ -107,7 +107,7 @@ if(typeof jQuery != 'undefined') {
 					});
 
 					$(".previous",$t).click(function(){
-						if(active===false) {	
+						if(active===false) {
 							animate("prev",true);
 							if(o.autoStart){
 								if (o.restart) {autoStart();}
@@ -162,6 +162,18 @@ if(typeof jQuery != 'undefined') {
 								},o.autoStart);
 							}
 						};
+						if (o.hoverPause) {
+							$(o.slides,$t).mouseenter(function(){
+								clearInterval(sliderIntervalID);
+								clearInterval(interval);
+								clearTimeout(restart);
+							});
+							$(o.slides,$t).mouseleave(function(){
+								sliderIntervalID = setInterval(function(){
+									if(active===false) {animate("next",true);}
+								},o.autoStart);
+							});
+						}
 					}
 
 					function current(times) {
@@ -173,13 +185,13 @@ if(typeof jQuery != 'undefined') {
 
 					function autoHeight(times) {
 						if(times===slides+1){times=1;}
-						if(times===0){times=slides;}	
+						if(times===0){times=slides;}
 						var getHeight = $(o.slides,$t).children(":eq("+(times-1)+")",$t).outerHeight();
-						$(o.container,$t).animate({height: getHeight},o.autoHeight);					
-					};		
+						$(o.container,$t).animate({height: getHeight},o.autoHeight);
+					};
 
-					function animate(dir,clicked){	
-						active = true;	
+					function animate(dir,clicked){
+						active = true;
 						switch(dir){
 							case "next":
 								times = times+1;
@@ -190,18 +202,18 @@ if(typeof jQuery != 'undefined') {
 									if (times===3){$(o.slides,$t).children(":eq(0)").css({left:(slides*width)});}
 									if (times===2){$(o.slides,$t).children(":eq("+(slides-1)+")").css({position:"absolute",left:width});}
 								}
-								$(o.slides,$t).animate({left: distance}, {duration: 1100, easing: "easeInOutExpo"}).animate({left: distance},o.slidespeed,function(){
+								$(o.slides,$t).animate({left: distance}, o.slidespeed, easeInOutExpo,function(){
 									if (times===slides+1) {
 										times = 1;
-										$(o.slides,$t).css({left:0},function(){$(o.slides,$t).animate({left:distance})});							
+										$(o.slides,$t).css({left:0},function(){$(o.slides,$t).animate({left:distance})});
 										$(o.slides,$t).children(":eq(0)").css({left:0});
-										$(o.slides,$t).children(":eq("+(slides-1)+")").css({ position:"absolute",left:-width});				
+										$(o.slides,$t).children(":eq("+(slides-1)+")").css({ position:"absolute",left:-width});
 									}
 									if (times===slides) $(o.slides,$t).children(":eq(0)").css({left:(slides*width)});
 									if (times===slides-1) $(o.slides,$t).children(":eq("+(slides-1)+")").css({left:(slides*width-width)});
 									active = false;
 								});
-								break; 
+								break;
 							case "prev":
 								times = times-1;
 								distance = (-(times*width-width));
@@ -211,7 +223,7 @@ if(typeof jQuery != 'undefined') {
 									if(times===0){$(o.slides,$t).children(":eq("+(slides-1)+")").css({position:"absolute",left:(-width)});}
 									if(times===1){$(o.slides,$t).children(":eq(0)").css({position:"absolute",left:0});}
 								}
-								$(o.slides,$t).animate({left: distance}, {duration: 1100, easing: "easeInOutExpo"}).animate({left: distance}, o.slidespeed,function(){
+								$(o.slides,$t).animate({left: distance}, o.slidespeed, easeInOutExpo,function(){
 									if (times===0) {
 										times = slides;
 										$(o.slides,$t).children(":eq("+(slides-1)+")").css({position:"absolute",left:(slides*width-width)});
@@ -234,13 +246,18 @@ if(typeof jQuery != 'undefined') {
 									$(o.slides,$t).children(":eq(0)").css({left:0});
 									if(times===slides){$(o.slides,$t).children(":eq(0)").css({left:(slides*width)});}
 									if(times===1){$(o.slides,$t).children(":eq("+(slides-1)+")").css({ position:"absolute",left:-width});}
-									$(o.slides,$t).children().fadeIn(o.fadespeed);
+									$(o.slides,$t).children().fadeIn(o.fadespeed, function() {
+										//removing filter from IE
+										if(jQuery.browser.msie) {
+											$(this).get(0).style.removeAttribute('filter');
+										}
+									});
 									active = false;
 								});
-								break; 
+								break;
 							default:
 								break;
-							}					
+							}
 						};
 					}
 				);
@@ -253,8 +270,9 @@ if(typeof jQuery != 'undefined') {
 			containerClick: true, //Click slider to goto next slide? true/false
 			autoStart: 0, //Set to positive number for true. This number will be the time between transitions.
 			restart: 0, //Set to positive number for true. Sets time until autoStart is restarted.
-			slidespeed: 100, //Speed of slide animation, 1000 = 1second.
-			fadespeed: 350, //Speed of fade animation, 1000 = 1second.
+			hoverPause: false, //Set to true to pause on hover, if autoStart is also true
+			slidespeed: 300, //Speed of slide animation, 1000 = 1second.
+			fadespeed: 200, //Speed of fade animation, 1000 = 1second.
 			autoHeight: 0, //Set to positive number for true. This number will be the speed of the animation.
 			addPagination: false //Add pagination links based on content? true/false
 		};

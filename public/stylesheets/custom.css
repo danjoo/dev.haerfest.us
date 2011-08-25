@@ -279,3 +279,18 @@ ul.pagination li.active a {
   color: #888888;
   text-decoration:underline;
 }
+ul.pagination li a:hover#grey_olive {
+  color: #888888;
+  text-decoration:underline;
+}
+ul.pagination li a:hover#navy_slate {
+  color: #00008B;
+  text-decoration:underline;
+}
+ul.pagination li a:hover#carmine_red {
+  color: #B00000;
+  text-decoration:underline;
+}
+
+
+
