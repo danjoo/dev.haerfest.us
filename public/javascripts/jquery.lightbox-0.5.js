@@ -272,10 +272,8 @@
 						});
 				} else {
 					// Show the images button for Next buttons
-					$('#lightbox-nav-btnPrev').unbind().hover(function() {
+					$('#lightbox-nav-btnPrev').unbind().show(function() {
 						$(this).css({ 'background' : 'url(' + settings.imageBtnPrev + ') left 45% no-repeat' });
-					},function() {
-						$(this).css({ 'background' : 'transparent url(' + settings.imageBlank + ') no-repeat' });
 					}).show().bind('click',function() {
 						settings.activeImage = settings.activeImage - 1;
 						_set_image_to_view();
@@ -296,10 +294,8 @@
 						});
 				} else {
 					// Show the images button for Next buttons
-					$('#lightbox-nav-btnNext').unbind().hover(function() {
+					$('#lightbox-nav-btnNext').unbind().show(function() {
 						$(this).css({ 'background' : 'url(' + settings.imageBtnNext + ') right 45% no-repeat' });
-					},function() {
-						$(this).css({ 'background' : 'transparent url(' + settings.imageBlank + ') no-repeat' });
 					}).show().bind('click',function() {
 						settings.activeImage = settings.activeImage + 1;
 						_set_image_to_view();
