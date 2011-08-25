@@ -9,33 +9,42 @@
 <% slash = image_tag("layout/layout_topnav_slash.png", :alt => "/") %>
 
 <!-- Top Navigation -->
+<div class="topnav_collections">
+  <%= #LINK TO COLLECTIONS AND USES BOLD IMAGE IF CURRENT
 
-<%= #LINK TO COLLECTIONS AND USES BOLD IMAGE IF CURRENT
+     link_to_unless ( params[:action] == "collections" ||
+                      params[:action] == "styles") ,
+                      collections, collections_path do
+       link_to collections_ul, collections_path
+     end
 
-   link_to_unless ( params[:action] == "collections" ||
-                    params[:action] == "styles") ,
-                    collections, collections_path do
-     link_to collections_ul, collections_path
-   end
+  %>
+</div>
 
-%>
+<div class="topnav_slash">
+  <%= slash %>
+</div>
 
-<%= slash %>
+<div class="topnav_informtion">
+  <%= #LINK TO INFORMATION
 
-<%= #LINK TO INFORMATION
+     link_to_unless_current information, information_path do
+       link_to information_ul, information_path
+     end
 
-   link_to_unless_current information, information_path do
-     link_to information_ul, information_path
-   end
+  %>
+</div>
 
-%>
+<div class="topnav_slash">
+  <%= slash %>
+</div>
 
-<%= slash %>
+<div class="topnav_contact">
+  <%= #LINK TO CONTACT
 
-<%= #LINK TO CONTACT
+     link_to_unless_current contact, contact_path do
+       link_to contact_ul, contact_path
+     end
 
-   link_to_unless_current contact, contact_path do
-     link_to contact_ul, contact_path
-   end
-
-%>
+  %>
+</div>
