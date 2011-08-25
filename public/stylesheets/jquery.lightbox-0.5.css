@@ -16,8 +16,8 @@
 	top: 0;
 	left: 0;
 	z-index: 90;
-	width: 100% !important;;
-	height: 500px;
+	width: 100%;
+	height: 768px;
 }
 #jquery-lightbox {
 	position: absolute; /*important param overrides*/
