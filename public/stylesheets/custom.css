@@ -60,7 +60,6 @@ table {
 	src: url('cool_font.ttf');
 }*/
 
-
 .main {
   text-align: center;
   font-family: "Century Gothic", "sans-serif";
@@ -81,10 +80,14 @@ table {
   height:50px;
 }
 
-.header h1{
-  width:100%;
-  position:absolute;
-  bottom:0;
+/* blog.themeforest.net/tutorials/vertical-centering-with-css */
+/* net.tutsplus.com/tutorials/html-css-techniques/9-most-common-ie-bugs-and-how-to-fix-them */
+.header .header_inner {
+  position:relative;
+  display: inline;  
+  float: left;
+  width: 100%;
+  margin-top: 34px;
 }
 
 .topnav {
@@ -92,9 +95,14 @@ table {
   overflow:hidden;
   width:1024px;
   height:62px;
-  display: table-cell;
-  vertical-align: middle;
+}
 
+.topnav .topnav_inner {
+  position:relative;
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-top: 21px;
 }
 
 .topnav_slash {
@@ -182,8 +190,14 @@ table {
   margin-bottom: 7px;
   width:1024px;
   height:94px;
-  display: table-cell;
-  vertical-align: middle;
+}
+
+.bottomnav .bottomnav_inner {
+  position:relative;
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .footer {
