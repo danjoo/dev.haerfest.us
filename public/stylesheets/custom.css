@@ -16,7 +16,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: auto;
+	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -76,12 +76,13 @@ table {
 
 .header {
   position:relative;
-  overflow:hidden;
   width:1024px;
   height:50px;
 }
 
 .header h1{
+  position: relative;
+  float:left;
   width:100%;
   position:absolute;
   bottom:0;
@@ -89,7 +90,6 @@ table {
 
 .topnav {
   position:relative;
-  overflow:hidden;
   width:1024px;
   height:62px;
   display: table-cell;
@@ -101,7 +101,6 @@ table {
   position:relative;
   float: left;
   display: block;
-  overflow:hidden;
   text-align: center;
   width:10px;
 }
@@ -110,7 +109,6 @@ table {
   position:relative;
   float: left;
   display: block;
-  overflow:hidden;
   text-align: right;
   width:460px;
 }
@@ -119,7 +117,6 @@ table {
   position:relative;
   float: left;
   display: block;
-  overflow:hidden;
   text-align: left;
   width:94px;
 }
@@ -128,7 +125,6 @@ table {
   position:relative;
   float: left;
   display: block;
-  overflow:hidden;
   text-align: left;
   width:450px;
 }
@@ -148,28 +144,23 @@ table {
 .left_container{
   position:relative;
   float:left;
-  overflow:hidden;
   width:140px;
 }
 
 .window_container{
   position:relative;
 	float:left;
-  overflow:hidden;
   width:745px;
 }
 
-
-.window_container{
+.right_container{
   position:relative;
-	float:left;
-  overflow:hidden;
-  width:745px;
+  float:left;
+  width:139px;
 }
 
 .contact_container{
   position:relative;
-  overflow:hidden;
   width:1024px;
   height:496px;
   display: table-cell;
@@ -178,12 +169,13 @@ table {
 
 .bottomnav {
   position:relative;
-  overflow:hidden;
+  float: left;
   margin-bottom: 7px;
   width:1024px;
   height:94px;
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
 }
 
 .footer {
