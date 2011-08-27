@@ -41,17 +41,19 @@
     </div>
 
     <div class ="bottomnav">
-      <div class="pagination_container">
-        <ul class="pagination">
-            <%# displays all the available colors %>
-            <% @family.each_with_index() do |(key, value), index| %>
-              <% if index == @family.length-1 %>
-                <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> </li>
-              <% else %>
-                <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> / </li>
+      <div class="bottomnav_inner">
+        <div class="pagination_container">
+          <ul class="pagination">
+              <%# displays all the available colors %>
+              <% @family.each_with_index() do |(key, value), index| %>
+                <% if index == @family.length-1 %>
+                  <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> </li>
+                <% else %>
+                  <li><%= link_to "#{key.to_s.upcase}","#{key.to_s}" %> / </li>
+                <% end %>
               <% end %>
-            <% end %>
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
 

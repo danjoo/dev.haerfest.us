@@ -2,6 +2,8 @@
 <% logo = image_tag("layout/layout_logo.png", :alt => "Home") %>
 
 <!-- home page -->
-<h1><%= link_to_unless_current logo, home_path %></h1>
+<div class="header_inner">
+    <%= link_to_unless_current logo, home_path %>
+</div>
 
 

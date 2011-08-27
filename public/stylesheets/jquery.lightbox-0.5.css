@@ -13,6 +13,9 @@
  */
 #jquery-overlay{
 	position: absolute;
+  float: left;
+  overflow: auto;
+  clear:both;
 	top: 0;
 	left: 0;
 	z-index: 90;
@@ -21,6 +24,7 @@
 }
 #jquery-lightbox {
 	position: absolute; /*important param overrides*/
+  float: left;
 	top: 105px !important; /*adjust lightbox to position right inside the gallery*/
 	left: 0;
 	width: 100%;
