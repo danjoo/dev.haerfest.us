@@ -28,24 +28,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 
 /*
     Document   : custom
@@ -237,12 +219,6 @@ a:visited {
 }
 
 /* slider */
-
-
-section .table {
-  text-align:center;
-  border-width: 1px;
-}
 
 #loopedslider {
   position:relative;
