@@ -1,3 +1,52 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: auto;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /*
     Document   : custom
     Created on : Dec 23, 2010, 5:47:16 PM
@@ -15,9 +64,6 @@
 .main {
   text-align: center;
   font-family: "Century Gothic", "sans-serif";
-	padding: 0;
-	border: 0;
-  margin: 0;
 }
 
 .resolution {
@@ -25,18 +71,17 @@
   overflow:hidden;
   width:1024px;
   height:768px;
-  margin: 0;
+  margin: auto;
 }
 
 .header {
   position:relative;
+  overflow:hidden;
   width:1024px;
   height:50px;
 }
 
 .header h1{
-  position: relative;
-  float:left;
   width:100%;
   position:absolute;
   bottom:0;
@@ -44,16 +89,19 @@
 
 .topnav {
   position:relative;
+  overflow:hidden;
   width:1024px;
   height:62px;
   display: table-cell;
   vertical-align: middle;
+
 }
 
 .topnav_slash {
   position:relative;
   float: left;
   display: block;
+  overflow:hidden;
   text-align: center;
   width:10px;
 }
@@ -62,6 +110,7 @@
   position:relative;
   float: left;
   display: block;
+  overflow:hidden;
   text-align: right;
   width:460px;
 }
@@ -70,6 +119,7 @@
   position:relative;
   float: left;
   display: block;
+  overflow:hidden;
   text-align: left;
   width:94px;
 }
@@ -78,6 +128,7 @@
   position:relative;
   float: left;
   display: block;
+  overflow:hidden;
   text-align: left;
   width:450px;
 }
@@ -97,23 +148,28 @@
 .left_container{
   position:relative;
   float:left;
+  overflow:hidden;
   width:140px;
 }
 
 .window_container{
   position:relative;
 	float:left;
+  overflow:hidden;
   width:745px;
 }
 
-.right_container{
+
+.window_container{
   position:relative;
-  float:left;
-  width:139px;
+	float:left;
+  overflow:hidden;
+  width:745px;
 }
 
 .contact_container{
   position:relative;
+  overflow:hidden;
   width:1024px;
   height:496px;
   display: table-cell;
@@ -122,13 +178,12 @@
 
 .bottomnav {
   position:relative;
-  float: left;
+  overflow:hidden;
   margin-bottom: 7px;
   width:1024px;
   height:94px;
   display: table-cell;
   vertical-align: middle;
-  text-align: center;
 }
 
 .footer {
