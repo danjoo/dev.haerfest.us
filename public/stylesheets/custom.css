@@ -154,6 +154,7 @@ time, mark, audio, video {
 
 .contact_container{
   position:relative;
+  display: inline;  
   overflow:hidden;
   width:1024px;
   height:496px;
