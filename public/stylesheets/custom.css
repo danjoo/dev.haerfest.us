@@ -144,17 +144,56 @@ time, mark, audio, video {
   width:745px;
 }
 
-
-.window_container{
+.right_container{
   position:relative;
 	float:left;
   overflow:hidden;
+  width:139px;
+}
+
+.stockists_center_container{
+  position:relative;
+  overflow:hidden;
+  height:217px;
+}
+
+.stockists_ocny_container{
+  position:relative;
+  float:left;
+  overflow:hidden;
+  width:327px;
+}
+
+.stockists_middle_slash_container{
+  position:relative;
+	float:left;
+  overflow:hidden;
+  width:101px;
+}
+
+.stockists_ocla_container{
+  position:relative;
+	float:left;
+  overflow:hidden;
+  width:317px;
+}
+
+.stockists_bottom_slash_container {
+  position:relative;
+  overflow:hidden;
   width:745px;
+  height:55px;
+}
+
+.stockists_idlm_container {
+  position:relative;
+  overflow:hidden;
+  width:745px;
+  height:224px;
 }
 
 .contact_container{
   position:relative;
-  display: inline;  
   overflow:hidden;
   width:1024px;
   height:496px;
@@ -163,6 +202,7 @@ time, mark, audio, video {
 .contact_container_inner{
   position:relative;
   display: inline;
+  text-align: center;
   float: left;
   width: 100%;
   margin-top: 212px;
