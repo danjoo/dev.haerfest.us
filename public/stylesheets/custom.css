@@ -157,8 +157,14 @@ time, mark, audio, video {
   overflow:hidden;
   width:1024px;
   height:496px;
-  display: table-cell;
-  vertical-align: middle;
+}
+
+.contact_container_inner{
+  position:relative;
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-top: 212px;
 }
 
 .bottomnav {
