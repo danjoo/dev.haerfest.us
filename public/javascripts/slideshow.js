@@ -15,10 +15,6 @@ $(function() {
 
 });
 
-//fade in container section to avoid choppy load
-$(function() {
-    $(".wrapper").hide().fadeIn(700);
-});
 
 //fade in header topnav section to avoid choppy load equals to .ready()
 //$(function() {
