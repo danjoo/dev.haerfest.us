@@ -15,3 +15,8 @@ $('.meerkat').meerkat({
             });
 
 });
+
+$(function() {
+    $(".splash_click_for_more_family").delay(2800).fadeOut(1600);
+    $(".splash_click_for_more_style").delay(2000).fadeOut(1600);
+});

@@ -259,6 +259,20 @@ a:visited {
   
 }
 
+.splash_click_for_more_family{
+  position: absolute;
+  text-align: center;
+  height: 496px;
+  z-index: 10;
+}
+
+.splash_click_for_more_style{
+  position: absolute;
+  text-align: center;
+  height: 496px;
+  z-index: 10;
+}
+
 /* slider */
 
 #loopedslider {

@@ -1,11 +1,14 @@
 <div class="wrapper">
-    <div class="meerkat">
+
+  <%# decided to use meerkat instead of click_for_more_styles to hide arrows %>
+  <div class="meerkat">
     <div class="splash">
     <% click_for_more_image = @family[:B1][0].gsub(/.(png|gif|jpg|jpeg)/, '_ro.jpg') %>
     <%=  image_tag("collections/#{params[:family]}/#{click_for_more_image}", :alt => "click image for details") %>
     <%#=  image_tag("collections/navy_slate/B1_front_navy_ro.jpg", :alt => "click image for details") %>
     </div>
   </div>
+
   <div id="loopedslider">
 
     <div class ="center_container">
