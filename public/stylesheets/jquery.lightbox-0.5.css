@@ -16,7 +16,7 @@
 	top: 0;
 	left: 0;
 	z-index: 90;
-	width: 1024px;
+  min-width: 1024px !important; /*solves ipad 2 problem.. victory! */
 	height: 768px;
 }
 #jquery-lightbox {
