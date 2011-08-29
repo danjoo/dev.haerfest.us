@@ -147,7 +147,6 @@ time, mark, audio, video {
 .right_container{
   position:relative;
 	float:left;
-  overflow:hidden;
   width:139px;
 }
 

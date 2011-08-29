@@ -1,11 +1,11 @@
-<div class="meerkat">
-  <div class="splash">
-  <%=  image_tag("collections/navy_slate/B1_front_navy_ro.jpg", :alt => "click image for details") %>
-  <%#=  image_tag("layout/layout_click_for_more.png", :alt => "click image for details") %>
-  </div>
-</div>
-
 <div class="wrapper">
+    <div class="meerkat">
+    <div class="splash">
+    <% click_for_more_image = @family[:B1][0].gsub(/.(png|gif|jpg|jpeg)/, '_ro.jpg') %>
+    <%=  image_tag("collections/#{params[:family]}/#{click_for_more_image}", :alt => "click image for details") %>
+    <%#=  image_tag("collections/navy_slate/B1_front_navy_ro.jpg", :alt => "click image for details") %>
+    </div>
+  </div>
   <div id="loopedslider">
 
     <div class ="center_container">
