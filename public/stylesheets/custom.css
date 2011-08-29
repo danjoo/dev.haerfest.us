@@ -261,6 +261,8 @@ a:visited {
 
 .splash_click_for_more_family{
   position: absolute;
+  background-color: transparent;
+  background-repeat: repeat;
   text-align: center;
   height: 496px;
   z-index: 10;
@@ -268,6 +270,7 @@ a:visited {
 
 .splash_click_for_more_style{
   position: absolute;
+  background-color: transparent;
   text-align: center;
   height: 496px;
   z-index: 10;

@@ -3,10 +3,13 @@
   <%# decided to use meerkat instead of click_for_more_styles to hide arrows %>
   <div class="meerkat">
     <div class="splash">
-    <% click_for_more_image = @family[:B1][0].gsub(/.(png|gif|jpg|jpeg)/, '_ro.jpg') %>
-    <%=  image_tag("collections/#{params[:family]}/#{click_for_more_image}", :alt => "click image for details") %>
-    <%#=  image_tag("collections/navy_slate/B1_front_navy_ro.jpg", :alt => "click image for details") %>
-    </div>
+    <!--[if !IE]><!-->
+      <%=  image_tag("layout/layout_click_for_more.png", :alt => "click image for more") %>
+    <!--<![endif]-->
+    <!--[if lt IE 8]>
+      <% click_for_more_image = @family[:B1][0].gsub(/.(png|gif|jpg|jpeg)/, '_ro.jpg') %>
+      <%=  image_tag("collections/#{params[:family]}/#{click_for_more_image}", :alt => "click image for details") %>
+    <![endif]-->    </div>
   </div>
 
   <div id="loopedslider">

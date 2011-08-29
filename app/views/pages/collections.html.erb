@@ -16,7 +16,12 @@
       
         <div class="splash_click_for_more_family">
         <div class="splash">
-        <%=  image_tag("collections/navy_slate_family_ro.jpg", :alt => "click image for more") %>
+          <!--[if !IE]><!-->
+            <%=  image_tag("layout/layout_click_for_more.png", :alt => "click image for more") %>
+          <!--<![endif]-->
+          <!--[if lt IE 8]>
+            <%=  image_tag("collections/grey_olive_family_ro.jpg", :alt => "click image for more") %>
+          <![endif]-->
         </div>
       </div>
 
