@@ -56,10 +56,25 @@ class PagesController < ApplicationController
     elsif params[:family] == "collection_a"
       @family = {
 
-        :B1 => ["B1_front.png", "B1_back.png", "B1_detail.png"],
-        :B5 => ["B5_front.png", "B5_angled.png", "B5_back.png"],
-        :B6 => ["B6_tall.png", "B6_angled.png", "B6_detail.png"],
-        :B7 => ["B7_front.png", "B7_angled.png", "B7_detail.png"]
+        :A1 => ["HAERFEST_A1_front_black.jpg",
+                "HAERFEST_A1_back_black.jpg",
+                "HAERFEST_A1_front_navy.jpg",
+                "HAERFEST_A1_back_navy.jpg",
+                "haerfestinfo_A1.jpg"],
+        :A2 => ["HAERFEST_A2_front_black.jpg",
+                "HAERFEST_A2_detail_black.jpg",
+                "HAERFEST_A2_front_navy.jpg",
+                "HAERFEST_A2_detail_navy.jpg",
+                "haerfestinfo_A2.jpg"],
+        :A3 => ["HAERFEST_A3_front_black.jpg",
+                "HAERFEST_A3_front_navy.jpg",
+                "HAERFEST_A3_side_black.jpg",
+                "HAERFEST_A3_side_navy.jpg",
+                "haerfestinfo_A3.jpg"],
+        :A4 => ["HAERFEST_A4_front.jpg",
+                "HAERFEST_A4_detail.jpg",
+                "HAERFEST_A4_top.jpg",
+                "haerfestinfo_A4.jpg"],
       }
 
     else
@@ -72,6 +87,8 @@ class PagesController < ApplicationController
       }
 
     end
+
+    @collection_label =":B1"
 
   end
 

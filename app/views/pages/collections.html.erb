@@ -1,6 +1,6 @@
 <div class="meerkat">
   <div class="splash">
-  <%=  image_tag("collections/collection_b.jpg", :alt => "collection_b") %>
+  <%=  image_tag("collections/collection_b.png", :alt => "collection_b") %>
   </div>
 </div>
 
@@ -48,7 +48,7 @@
     <div class ="bottomnav">
       <div class ="bottomnav_inner">
         <div class="pagination_container">
-        <%= link_to "COLLECTION B",home_path %> /
+        <%= link_to "COLLECTION B",home_path %> -
           <ul class="pagination">
               <%# displays all the available colors %>
               <% @cover.each_with_index do |(key_family, value_pic_array),index| %>

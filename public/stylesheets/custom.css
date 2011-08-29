@@ -40,6 +40,7 @@ time, mark, audio, video {
 .main {
   text-align: center;
   font-family: "Century Gothic", "sans-serif";
+  font-size:10pt;
 }
 
 .resolution {
@@ -213,6 +214,8 @@ time, mark, audio, video {
   margin-bottom: 7px;
   width:1024px;
   height:94px;
+  letter-spacing: 0.01em;
+  font-weight:600;
 }
 
 .bottomnav .bottomnav_inner {
