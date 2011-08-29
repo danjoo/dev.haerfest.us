@@ -168,6 +168,8 @@
 					left:	arrPageScroll[0]
 				});
 			});
+      alert("get page size: " + arrPageSizes[0]);
+      alert("get_page_scroll: " + arrPageSizes[1]);
 		}
 		/**
 		 * Prepares image exibition; doing a image�s preloader to calculate it�s size
