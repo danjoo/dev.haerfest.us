@@ -147,7 +147,6 @@ time, mark, audio, video {
 .right_container{
   position:relative;
 	float:left;
-  overflow:hidden;
   width:139px;
 }
 
@@ -258,6 +257,23 @@ a:visited {
   text-align: center;
   /* vertical-align:middle;*/
   
+}
+
+.splash_click_for_more_family{
+  position: absolute;
+  background-color: transparent;
+  background-repeat: repeat;
+  text-align: center;
+  height: 496px;
+  z-index: 10;
+}
+
+.splash_click_for_more_style{
+  position: absolute;
+  background-color: transparent;
+  text-align: center;
+  height: 496px;
+  z-index: 10;
 }
 
 /* slider */
