@@ -39,7 +39,7 @@ time, mark, audio, video {
 
 .main {
   text-align: center;
-  font-family: "sans-serif";
+  font-family: "Century Gothic", sans-serif;
   font-size:10pt;
 }
 
@@ -231,6 +231,7 @@ time, mark, audio, video {
   overflow:hidden;
   margin-top: 5px;
   height:64px;
+  font-family: "Century Gothic", sans-serif;
   color: #888888;
   font-size: 65%;
 }
@@ -314,6 +315,7 @@ a:visited {
   margin-top: 10px;
   font-size: 11px;
 	word-spacing: 3px;
+  font-family: "Century Gothic", sans-serif;
 }
 
 ul.pagination {
