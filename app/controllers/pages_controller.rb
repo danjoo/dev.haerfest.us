@@ -29,10 +29,10 @@ class PagesController < ApplicationController
     if params[:family] == "grey_olive"
       @family = {
 
-        :B1 => ["B1_front_grey.png", "B1_back_grey.png", "B1_detail_grey.png"],
-        :B5 => ["B5_front_grey.png", "B5_angled_grey.png", "B5_back_grey.png"],
-        :B6 => ["B6_tall_grey.png", "B6_angled_grey.png", "B6_detail_grey.png"],
-        :B7 => ["B7_front_grey.png", "B7_angled_grey.png", "B7_detail_grey.png"]
+        :B1 => ["B1_front_grey.jpg", "B1_back_grey.jpg", "B1_detail_grey.jpg"],
+        :B5 => ["B5_front_grey.jpg", "B5_angled_grey.jpg", "B5_back_grey.jpg"],
+        :B6 => ["B6_angled_grey.jpg", "B6_tall_grey.jpg", "B6_detail_grey.jpg"],
+        :B7 => ["B7_front_grey.jpg", "B7_angled_grey.jpg", "B7_detail_grey.jpg"]
       }
 
     elsif params[:family] == "navy_slate"
