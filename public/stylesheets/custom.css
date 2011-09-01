@@ -266,7 +266,10 @@ a:visited {
   position: absolute;
   background-color: transparent;
   background-repeat: repeat;
-  text-align: center;
+  font-family: "Times New Roman", sans-serif;
+  font-size:10pt;
+  margin-left: 620px;
+  margin-top: 5px;
   height: 496px;
   z-index: 10;
 }
@@ -274,7 +277,11 @@ a:visited {
 .splash_click_for_more_style{
   position: absolute;
   background-color: transparent;
-  text-align: center;
+  background-repeat: repeat;
+  font-family: "Times New Roman", sans-serif;
+  font-size:10pt;
+  margin-left: 620px;
+  margin-top: 5px;
   height: 496px;
   z-index: 10;
 }
