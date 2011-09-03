@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @cover = {
       #:collection_b => ["collections/collection_b.jpg", "collections/collection_b_ro.jpg"],
       :grey_olive => ["collections/grey_olive_family.jpg", "collections/grey_olive_family_ro.jpg"],
-      :navy_slate => ["collections/navy_slate_family.png", "collections/navy_slate_family_ro.jpg"],
+      :navy_slate => ["collections/navy_slate_family.jpg", "collections/navy_slate_family_ro.jpg"],
       :carmine_red => ["collections/carmine_red_family.jpg", "collections/carmine_red_family_ro.jpg"],
       :collection_a => ["collections/collection_a.png", "collections/collection_a_ro.png"]
     }
@@ -38,7 +38,7 @@ class PagesController < ApplicationController
     elsif params[:family] == "navy_slate"
       @family = {
 
-        :B1 => ["B1_front_navy.png", "B1_back_navy.jpg", "B1_detail_navy.jpg","B1_info_navy.png"],
+        :B1 => ["B1_front_navy.jpg", "B1_back_navy.jpg", "B1_detail_navy.jpg","B1_info_navy.png"],
         :B5 => ["B5_front_navy.jpg", "B5_angled_navy.jpg", "B5_back_navy.jpg"],
         :B6 => ["B6_angled_navy.jpg", "B6_navy_navy.jpg", "B6_detail_navy.jpg"],
         :B7 => ["B7_front_navy.jpg", "B7_angled_navy.jpg", "B7_detail_navy.jpg"]
