@@ -1,5 +1,13 @@
 class PagesController < ApplicationController
 
+#caching
+caches_page :home
+caches_page :collections
+caches_page :styles
+caches_page :information
+caches_page :contact
+
+  
   def home
     @title = "Home"
   end
