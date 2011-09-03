@@ -7,7 +7,6 @@ caches_page :styles
 caches_page :information
 caches_page :contact
 
-  
   def home
     @title = "Home"
   end
