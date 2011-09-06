@@ -56,7 +56,7 @@ caches_page :contact
 
         :B1 => ["B1_front_red.jpg", "B1_back_red.jpg", "B1_detail_red.jpg"],
         :B5 => ["B5_front_red.jpg", "B5_angled_red.jpg", "B5_back_red.jpg"],
-        :B6 => ["B6_tall_red.jpg", "B6_angled_red.jpg", "B6_detail_red.jpg"],
+        :B6 => ["B6_angled_red.jpg", "B6_tall_red.jpg", "B6_detail_red.jpg"],
         :B7 => ["B7_front_red.jpg", "B7_angled_red.jpg", "B7_detail_red.jpg"]
       }
 
