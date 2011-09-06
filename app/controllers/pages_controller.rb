@@ -16,10 +16,10 @@ caches_page :contact
 
     @cover = {
       #:collection_b => ["collections/collection_b.jpg", "collections/collection_b_ro.jpg"],
-      :grey_olive => ["collections/grey_olive_family.jpg", "collections/grey_olive_family_ro.jpg"],
-      :navy_slate => ["collections/navy_slate_family.jpg", "collections/navy_slate_family_ro.jpg"],
-      :carmine_red => ["collections/carmine_red_family.jpg", "collections/carmine_red_family_ro.jpg"],
-      :collection_a => ["collections/collection_a.png", "collections/collection_a_ro.png"]
+      :grey_olive => ["collections/grey_olive_family.jpg"],
+      :navy_slate => ["collections/navy_slate_family.jpg"],
+      :carmine_red => ["collections/carmine_red_family.jpg"],
+      :collection_a => ["collections/collection_a.jpg"]
     }
 
   end
