@@ -16,7 +16,7 @@
       
         <div class="splash_click_for_more_family">
         <div class="splash">
-          *detail images coming soon!
+          *click for more images
         </div>
       </div>
 
@@ -26,7 +26,8 @@
           <%# displays all the available colors %>
           <% @cover.each do |key_family, value_pic_array| %>
             <div id="<%= key_family.to_s %>" >
-              <%= image_tag "#{value_pic_array.first}" %>
+              <%= link_to (image_tag "#{value_pic_array.first}"),
+                           styles_path(:family => "#{key_family.to_s}") %>
             </div>
           <% end %>
 
