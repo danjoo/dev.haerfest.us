@@ -22,15 +22,13 @@
 
         <div class="slide_container">
           <div class="slides">
-
-          <%# displays all the available colors %>
-          <% @cover.each do |key_family, value_pic_array| %>
-            <div id="<%= key_family.to_s %>" >
-              <%= link_to (image_tag "#{value_pic_array.first}"),
-                           styles_path(:family => "#{key_family.to_s}") %>
-            </div>
-          <% end %>
-
+            <%# displays all the available colors %>
+            <% @cover.each do |key_family, value_pic_array| %>
+              <div id="<%= key_family.to_s %>" >
+                <%= link_to (image_tag "#{value_pic_array.first}"),
+                             styles_path(:family => "#{key_family.to_s}") %>
+              </div>
+            <% end %>
           </div>
         </div><!-- end slide container -->
       </div>
