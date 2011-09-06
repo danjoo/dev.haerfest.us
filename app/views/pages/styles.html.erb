@@ -19,7 +19,14 @@
             <% @family.each do |key1, value1| %>
               <div id="<%= key1.to_s %>" >
                 <% value1.each do |value2| %>
+                  <% if params[:family] == "collection_a" && value1.index("#{value2}") == 0 %>
+                    <%= link_to (image_tag "collections/#{params[:family]}/#{value2.to_s}"),
+                                 "images/collections/#{params[:family]}/#{value2.to_s}" %>
+                  <% elsif params[:family] == "collection_a" && value1.index("#{value2}") != 0 %>
+                    <a href="images/collections/<%= "#{params[:family]}/#{value2.to_s}" %>"></a>
+                  <% elsif value1.index("#{value2}") == 0 %>
                     <%= image_tag "collections/#{params[:family]}/#{value2.to_s}" %>
+                  <% end %>
                 <% end %>
               </div>
             <% end %>
