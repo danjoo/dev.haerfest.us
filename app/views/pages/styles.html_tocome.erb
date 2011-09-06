@@ -9,7 +9,7 @@
       <div class ="window_container">
         <div class="splash_click_for_more_style">
           <div class="splash">
-            *detail images coming soon!
+            *click for more images
           </div>
         </div>
         <div class="slide_container">
@@ -19,7 +19,12 @@
             <% @family.each do |key1, value1| %>
               <div id="<%= key1.to_s %>" >
                 <% value1.each do |value2| %>
-                    <%= image_tag "collections/#{params[:family]}/#{value2.to_s}" %>
+                  <% if value1.index("#{value2}") == 0 %>
+                    <%= link_to (image_tag "collections/#{params[:family]}/#{value2.to_s}"),
+                                 "images/collections/#{params[:family]}/#{value2.to_s}" %>
+                  <% else %>
+                    <a href="images/collections/<%= "#{params[:family]}/#{value2.to_s}" %>"></a>
+                  <% end %>
                 <% end %>
               </div>
             <% end %>

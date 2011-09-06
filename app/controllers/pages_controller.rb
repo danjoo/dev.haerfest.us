@@ -54,10 +54,10 @@ caches_page :contact
     elsif params[:family] == "carmine_red"
       @family = {
 
-        :B1 => ["B1_front_red.png", "B1_back_red.png", "B1_detail_red.png"],
-        :B5 => ["B5_front_red.png", "B5_angled_red.png", "B5_back_red.png"],
-        :B6 => ["B6_tall_red.png", "B6_angled_red.png", "B6_detail_red.png"],
-        :B7 => ["B7_front_red.png", "B7_angled_red.png", "B7_detail_red.png"]
+        :B1 => ["B1_front_red.jpg", "B1_back_red.jpg", "B1_detail_red.jpg"],
+        :B5 => ["B5_front_red.jpg", "B5_angled_red.jpg", "B5_back_red.jpg"],
+        :B6 => ["B6_tall_red.jpg", "B6_angled_red.jpg", "B6_detail_red.jpg"],
+        :B7 => ["B7_front_red.jpg", "B7_angled_red.jpg", "B7_detail_red.jpg"]
       }
 
     elsif params[:family] == "collection_a"
@@ -87,10 +87,10 @@ caches_page :contact
     else
        @family = {
 
-        :B1 => ["B1_front_grey.png", "B1_back_grey.png", "B1_detail_grey.png"],
-        :B5 => ["B5_front_grey.png", "B5_angled_grey.png", "B5_back_grey.png"],
-        :B6 => ["B6_tall_grey.png", "B6_angled_grey.png", "B6_detail_grey.png"],
-        :B7 => ["B7_front_grey.png", "B7_angled_grey.png", "B7_detail_grey.png"]
+        :B1 => ["B1_front_grey.jpg", "B1_back_grey.jpg", "B1_detail_grey.jpg"],
+        :B5 => ["B5_front_grey.jpg", "B5_angled_grey.jpg", "B5_back_grey.jpg"],
+        :B6 => ["B6_tall_grey.jpg", "B6_angled_grey.jpg", "B6_detail_grey.jpg"],
+        :B7 => ["B7_front_grey.jpg", "B7_angled_grey.jpg", "B7_detail_grey.jpg"]
       }
 
     end

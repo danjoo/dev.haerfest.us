@@ -6,17 +6,17 @@
 
 <div class="wrapper">
   <div id="loopedslider">
-    
+
     <div class ="center_container">
       <div class ="left_container">
         <%= link_to (image_tag "layout/layout_sidenav_left.png"), "#prev", :class => "previous" %>
       </div>
 
       <div class ="window_container">
-      
+
         <div class="splash_click_for_more_family">
         <div class="splash">
-          *detail images coming soon!
+          *click for more images
         </div>
       </div>
 
@@ -26,12 +26,8 @@
           <%# displays all the available colors %>
           <% @cover.each do |key_family, value_pic_array| %>
             <div id="<%= key_family.to_s %>" >
-              <% if  key_family.to_s == "collection_a" %>
-                <%= link_to (image_tag "#{value_pic_array.first}"),
-                             styles_path(:family => "#{key_family.to_s}") %>
-              <% else %>
-                <%= image_tag "#{value_pic_array.first}" %>
-              <% end %>
+              <%= link_to (image_tag "#{value_pic_array.first}"),
+                           styles_path(:family => "#{key_family.to_s}") %>
             </div>
           <% end %>
 
