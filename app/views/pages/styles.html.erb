@@ -9,7 +9,12 @@
       <div class ="window_container">
         <div class="splash_click_for_more_style">
           <div class="splash">
-            *detail images coming soon!
+            <% if params[:family] != "collection_a"  %>
+              *detail images coming soon!
+            <% else %>
+	      *click images for details
+            <% end %>
+
           </div>
         </div>
         <div class="slide_container">
@@ -43,6 +48,7 @@
     <div class ="bottomnav">
       <div class="bottomnav_inner">
         <div class="pagination_container">
+        <%= link_to "B",home_path %> -
           <ul class="pagination">
               <%# displays all the available colors %>
               <% @family.each_with_index() do |(key, value), index| %>

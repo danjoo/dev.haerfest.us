@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Restricted Access"
-AuthUserFile /var/www/dev.haerfest.us/config/usraccess
-Require user admin

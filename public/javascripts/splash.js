@@ -17,6 +17,6 @@ $('.meerkat').meerkat({
 });
 
 $(function() {
-    $(".splash_click_for_more_family").delay(9000).fadeOut(1600);
-    $(".splash_click_for_more_style").delay(8000).fadeOut(1600);
+    $(".splash_click_for_more_family").delay(15000).fadeOut(1600);
+    $(".splash_click_for_more_style").delay(12000).fadeOut(1600);
 });

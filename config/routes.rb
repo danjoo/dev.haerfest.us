@@ -14,6 +14,10 @@ DevHaerfestUs::Application.routes.draw do
   match '/information', :to => 'pages#information'
   match '/contact',     :to => 'pages#contact'
 
+  scope "style/:family" do
+    resources :pages
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
