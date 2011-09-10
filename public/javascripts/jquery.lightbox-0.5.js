@@ -32,7 +32,7 @@
 //			imageBtnNext:			'images/lightbox/btn-next.png',			// (string) Path and the name of the next button image
 			imageBtnPrev:			'images/layout/layout_sidenav_left.png',			// (string) Path and the name of the prev button image
 			imageBtnNext:			'images/layout/layout_sidenav_right.png',			// (string) Path and the name of the next button image
-			imageBtnClose:		'images/lightbox/lightbox-btn-close.gif',		// (string) Path and the name of the close btn
+			imageBtnClose:		'images/layout/layout_exit.png',		// (string) Path and the name of the close btn
 			imageBlank:				'images/lightbox/lightbox-blank.gif',			// (string) Path and the name of a blank image (one pixel)
 			// Configuration related to container image box
 			containerBorderSize:	10,			// (integer) If you adjust the padding in the CSS for the container, #lightbox-container-image-box, you will need to update this value
@@ -342,6 +342,10 @@
 				keycode = objEvent.keyCode;
 				escapeKey = objEvent.DOM_VK_ESCAPE;
 			}
+      // Fix because Escape Key wasn't being detected
+      if (escapeKey == undefined) {
+          escapeKey = 27;
+      }
 			// Get the key in lower case form
 			key = String.fromCharCode(keycode).toLowerCase();
 			// Verify the keys to close the ligthBox

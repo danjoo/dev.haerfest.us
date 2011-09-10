@@ -356,5 +356,20 @@ ul.pagination li a:hover#carmine_red {
   text-decoration:underline;
 }
 
-
+ul.pagination_link {
+  list-style:none;
+  padding:0;
+  margin:0;
+  display: inline;
+}
+ul.pagination_link li  {
+  display: inline;
+}
+ul.pagination_link li a {
+  vertical-align:text-top;
+}
+ul.pagination_link li.active a {
+  color: #888888;
+  text-decoration:underline;
+}
 

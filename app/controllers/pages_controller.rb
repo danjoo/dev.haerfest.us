@@ -75,6 +75,8 @@ caches_page :contact
                 "haerfestinfo_A2.jpg"],
         :A3 => ["HAERFEST_A3_front_black.jpg",
                 "HAERFEST_A3_front_navy.jpg",
+                "HAERFEST_A3_front_black_M.jpg",
+                "HAERFEST_A3_side_black_M2.jpg",
                 "HAERFEST_A3_side_black.jpg",
                 "HAERFEST_A3_side_navy.jpg",
                 "haerfestinfo_A3.jpg"],
