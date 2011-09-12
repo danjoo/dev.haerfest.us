@@ -96,10 +96,10 @@
 #lightbox-image-details-currentNumber {
 	display: block; 
 	clear: left; 
-	padding-bottom: 1.0em;	
+	padding-bottom: 0.2em;
 }			
 #lightbox-secNav-btnClose {
-	width: 66px; 
+	width: 0px;
 	float: right;
-	padding-bottom: 0.7em;	
+	padding-bottom: 0.2em;
 }

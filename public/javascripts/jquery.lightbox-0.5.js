@@ -38,8 +38,8 @@
 			containerBorderSize:	10,			// (integer) If you adjust the padding in the CSS for the container, #lightbox-container-image-box, you will need to update this value
 			containerResizeSpeed:	400,		// (integer) Specify the resize duration of container image. These number are miliseconds. 400 is default.
 			// Configuration related to texts in caption. For example: Image 2 of 8. You can alter either "Image" and "of" texts.
-			txtImage:				'Image',	// (string) Specify text "Image"
-			txtOf:					'of',		// (string) Specify text "of"
+			txtImage:				'',	// (string) Specify text "Image"
+			txtOf:					'/',		// (string) Specify text "of"
 			// Configuration related to keyboard navigation
 			keyToClose:				'c',		// (string) (c = close) Letter to close the jQuery lightBox interface. Beyond this letter, the letter X and the SCAPE key is used to.
 			keyToPrev:				'p',		// (string) (p = previous) Letter to show the previous image
@@ -245,8 +245,8 @@
 		 */
 		function _show_image_data() {
 			//do not show image data
-      //$('#lightbox-container-image-data-box').slideDown('fast');
-			$('#lightbox-image-details-caption').hide();
+      $('#lightbox-container-image-data-box').slideDown('fast');
+			//$('#lightbox-image-details-caption').hide();
 			if ( settings.imageArray[settings.activeImage][1] ) {
 				$('#lightbox-image-details-caption').html(settings.imageArray[settings.activeImage][1]).show();
 			}
