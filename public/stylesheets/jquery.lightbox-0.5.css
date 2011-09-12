@@ -52,6 +52,7 @@
 }
 #lightbox-nav {
 	position: absolute;
+/*	top: 18px !important; /*adjust lightbox to position nav in same place*/
 	top: 0;
 	left: 0;
 	height: 100%;

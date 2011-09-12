@@ -192,6 +192,20 @@ time, mark, audio, video {
   height:228px;
 }
 
+.follow_facebook_container{
+  position:relative;
+  float:left;
+  overflow:hidden;
+  width:379px;
+}
+
+.follow_twitter_container{
+  position:relative;
+  float:left;
+  overflow:hidden;
+  width:366px;
+}
+
 .contact_container{
   position:relative;
   overflow:hidden;

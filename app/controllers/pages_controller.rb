@@ -36,28 +36,28 @@ caches_page :contact
     if params[:family] == "grey_olive"
       @family = {
 
-        :B1 => ["B1_front_grey.jpg", "B1_back_grey.jpg", "B1_detail_grey.jpg"],
-        :B5 => ["B5_front_grey.jpg", "B5_angled_grey.jpg", "B5_back_grey.jpg"],
-        :B6 => ["B6_angled_grey.jpg", "B6_tall_grey.jpg", "B6_detail_grey.jpg"],
-        :B7 => ["B7_front_grey.jpg", "B7_angled_grey.jpg", "B7_detail_grey.jpg"]
+        :B1 => ["B1_front_grey.jpg", "B1_back_grey.jpg", "B1_pkt_detail_grey.jpg", "B1_info.jpg"],
+        :B5 => ["B5_front_grey.jpg", "B5_back_grey.jpg", "inner_detail_grey.jpg", "B5_info.jpg"],
+        :B6 => ["B6_angled_grey.jpg", "B6_tall_grey.jpg", "B6_detail_grey.jpg", "B6_info.jpg"],
+        :B7 => ["B7_front_grey.jpg", "B7_bottom_grey.jpg", "B7_detail_grey.jpg", "B7_info.jpg"]
       }
 
     elsif params[:family] == "navy_slate"
       @family = {
 
-        :B1 => ["B1_front_navy.jpg", "B1_back_navy.jpg", "B1_detail_navy.jpg","B1_info_navy.png"],
-        :B5 => ["B5_front_navy.jpg", "B5_angled_navy.jpg", "B5_back_navy.jpg"],
-        :B6 => ["B6_angled_navy.jpg", "B6_navy_navy.jpg", "B6_detail_navy.jpg"],
-        :B7 => ["B7_front_navy.jpg", "B7_angled_navy.jpg", "B7_detail_navy.jpg"]
+        :B1 => ["B1_front_navy.jpg", "B1_back_navy.jpg", "B1_pkt_detail_navy.jpg", "B1_info.jpg"],
+        :B5 => ["B5_front_navy.jpg", "B5_back_navy.jpg", "inner_detail_navy.jpg", "B5_info.jpg"],
+        :B6 => ["B6_angled_navy.jpg", "B6_tall_navy.jpg", "B6_detail_navy.jpg", "B6_info.jpg"],
+        :B7 => ["B7_front_navy.jpg", "B7_bottom_navy.jpg", "B7_detail_navy.jpg", "B7_info.jpg"]
       }
 
     elsif params[:family] == "carmine_red"
       @family = {
 
-        :B1 => ["B1_front_red.jpg", "B1_back_red.jpg", "B1_detail_red.jpg"],
-        :B5 => ["B5_front_red.jpg", "B5_angled_red.jpg", "B5_back_red.jpg"],
-        :B6 => ["B6_angled_red.jpg", "B6_tall_red.jpg", "B6_detail_red.jpg"],
-        :B7 => ["B7_front_red.jpg", "B7_angled_red.jpg", "B7_detail_red.jpg"]
+        :B1 => ["B1_front_red.jpg", "B1_back_red.jpg", "B1_pkt_detail_red.jpg", "B1_info.jpg"],
+        :B5 => ["B5_front_red.jpg", "B5_back_red.jpg", "inner_detail_red.jpg", "B5_info.jpg"],
+        :B6 => ["B6_angled_red.jpg", "B6_tall_red.jpg", "B6_detail_red.jpg", "B6_info.jpg"],
+        :B7 => ["B7_front_red.jpg", "B7_bottom_red.jpg", "B7_detail_red.jpg", "B7_info.jpg"]
       }
 
     elsif params[:family] == "collection_a"
